@@ -1,1 +1,15 @@
 
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# python caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
