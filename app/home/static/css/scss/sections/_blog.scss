@@ -1,0 +1,44 @@
+#blog-news {
+    margin: 90px;
+    text-align: center;
+    .post {
+        display: flex;
+        justify-content: space-around;
+        .post-item {
+            max-width: 33%;
+            text-align: left;
+            .post-item__image {
+                border-radius: 8px;
+                img {
+                    max-width: 100%;
+                    display: inline-block;
+                }
+            }
+            .post-item__title {
+                h4 {
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    a {
+                        margin: 20px;
+                        color: $dark_color_3;
+                        &:hover {
+                            color: $primary_color;
+                        }
+                    }
+                }
+            }
+            .post-item__description {
+                p {
+                    color: $dark_color_2;
+                }
+            }
+            &:hover {
+                .post-item__image {
+                    transform: scale(1.1) rotate(1deg);
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}

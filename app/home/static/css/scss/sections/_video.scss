@@ -1,0 +1,29 @@
+#video-area {
+    background: $white_color_2;
+    padding: 80px 0;
+    .flexbox {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .video {
+            position: relative;
+            .play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $white_color ;
+                display: inline-block;
+                border-radius: 50%;
+                padding: 25px;
+                background: $primary_color;
+                font-size: 30px;
+                &:hover {
+                    background: $white_color;
+                    color: $primary_color;
+                }
+            }
+        }
+    }
+}

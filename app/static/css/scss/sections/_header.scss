@@ -1,0 +1,38 @@
+#header {
+    background: $primary_color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    .flexbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menu {
+            margin-right: 180px;
+            a {
+                color: $white_color;
+                opacity: 0.8;
+                padding: 20px 15px;
+                margin: 15px 0;
+                &.active {
+                    opacity: 1;
+                    font-weight: 600;
+                }
+            }
+        }
+        .navbar-btn i {
+            padding: 10px;
+            border: 0.5px solid $white_color;
+            color: $white_color;
+            border-radius: 50%;
+            font-size: 19px;
+            &:hover {
+                background: $white_color;
+                color: $primary_color;
+            }
+        }
+
+    }
+}

@@ -1,14 +1,80 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iam benyamin</title>
+    <title>Iam Benyamin</title>
+
+    <!-- load icones -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     {% block style %}{% endblock %}
 </head>
+
 <body>
+    <div id="to-top">
+        <img src="{% static 'image/arrow.svg' %}" />
+    </div>
+    <div id="header">
+        <div class="container">
+            <div class="flexbox">
+                <div class="brand">
+                    <a href="https://demo.ayroui.com/templates/business-template/">
+                        <img src="{% static 'image/logo.svg' %}" />
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a class="active" href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-btn" onclick="toggleSlider()">
+                    <i class="lni lni-menu"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="slide" class='toggling'>
+        <div class="close-button" onclick="toggleSlider()">
+            <i class="lni lni-close"></i>
+        </div>
+        <div class="brand">
+            <a href="https://demo.ayroui.com/templates/business-template/">
+                <img src="{% static 'image/blue-logo.svg' %}" />
+            </a>
+        </div>
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet radicalising elite. Sapient fugal nisei rerum iusto intro.</p>
+        </div>
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our team</a></li>
+                <li><a href="#">latest news</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <h3>follow me on</h3>
+            <i class="lni lni-telegram-original"></i>
+            <i class="lni lni-linkedin-original"></i>
+            <i class="lni lni-twitter-original"></i>
+            <i class="lni lni-youtube"></i>
+        </div>
+    </div>
     {% block main %}{% endblock main %}
 
-    {% block scripts %}{% endbloc scripts %}
+    <script src="{% static 'js/slider.js' %}"></script>
+    {% block scripts %}{% endblock scripts %}
 </body>
+
 </html>

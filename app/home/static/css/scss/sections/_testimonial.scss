@@ -1,0 +1,25 @@
+#testimonials {
+    text-align: center;
+    padding: 90px;
+    background: $white_color_2;
+    .reviews {
+        display: flex;
+        .card {
+            flex-basis: 50%;
+            margin: 25px;
+            p {
+                margin: 30px 40px;
+            }
+            .person {
+                .persion__image {
+                    float: left;
+                    margin-left: 30px;
+                    img {
+                        border-radius: 50%;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

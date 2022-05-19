@@ -1,0 +1,82 @@
+#team {
+    text-align: center;
+    margin: 90px 0;
+    .team-group {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        .team-member {
+            position: relative;
+            box-shadow: 0px 1px 10px 2px $dark_color_4;
+            max-width: 33%;
+            border-radius: 8px;
+            margin-left: 15px;
+            margin-right: 15px;
+            .team-member__image {
+                img {
+                    max-width: 100%;
+                    display: block;
+                }
+            }
+            .team-member__content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: $white_color;
+                height: 100px;
+                padding: 20px 0;
+                transition: all 0.3s ease;
+                .social-links {
+                    a {
+                        display: inline-block;
+                        color: inherit;
+                        i {
+                            margin: 10px 10px;
+                            color: inherit;
+                            &:hover {
+                                color: $primary_color;
+                            }
+                        }
+                    }
+                    position: absolute;
+                    bottom: 55px;
+                    left: 70px;
+                    width: 200px;
+                    background: $white_color;
+                    color: $dark_color_2;
+                    border-radius: 20px;
+                    display: none;
+                }
+                h4 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-top: 15px;
+                }
+                span {
+                    color: $primary_color;
+                    font-size: 18px;
+                }
+                &:hover {
+                    height: 125px;
+                    background: $primary_color;
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    padding-bottom: 20px;
+                    .social-links {
+                        display: block;
+                        position: absolute;
+                        bottom:107px;
+                        transition: position 0.5s ease-in;
+                    }
+                    h4 {
+                        color: $white_color;
+                    }
+                    span {
+                        color: $white_color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+#pricing {
+    text-align: center;
+    padding: 90px;
+    background: $white_color_2;
+    .plans {
+        display: flex;
+        .card {
+            flex-basis: 33%;
+            border: 1px solid $white_color_3;
+            border-radius: 8px;
+            margin: 10px;
+            border-radius: 8px;
+            padding: 50px 20px;
+            .title {
+                border: 2px solid $primary_color;
+                border-radius: 30px;
+                display: inline-block;
+                padding: 8px 30px;
+                font-weight: 600;
+                color: $primary_color;
+                margin-bottom: 25px;
+                font-size: 16px;
+            }
+            .detail {
+                color: $dark_color_2;
+            }
+            .price {
+                font-size: 36px;
+                font-weight: bold;
+                margin: 30px auto;
+                position: relative;
+                span {
+                    color: $dark_color_2;
+                    font-size: 18px;
+                    font-weight: normal;
+                    &:first-child {
+                        position: absolute;
+                        top: 0;
+                        left: 115px;
+                    }
+                }
+            }
+            .btn {
+                border: 1px solid $primary_color;
+                border-radius: 3px;
+                display: inline-block;
+                padding: 10px 40px;
+                font-size: 18px;
+                letter-spacing: 1.2px;
+                font-weight: 700;
+                margin: 20px;
+                font-size: 18px;
+                color: $primary_color;
+                &:hover {
+                    background: $primary_color;
+                    color: $white_color;
+                    cursor: pointer;
+                }
+            }
+            .list-detail {
+                ul {
+                    li {
+                        margin-top: 10px;
+                        display: block;
+                        float: left;
+                        color: $dark_color_2;
+                        i {
+                            color: $primary_color;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                box-shadow: 0px 3px 10px #c7c7c7;
+                .btn {
+                    background: $primary_color;
+                    color: $white_color;
+                    &:hover {
+                        background: $primary_dark_color;
+                    }
+                }
+            }
+        }
+    }
+}

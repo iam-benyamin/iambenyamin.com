@@ -13,3 +13,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyc
+
+# css 
+*.css
+*.css.map
