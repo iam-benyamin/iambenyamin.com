@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div id="to-top">
+    <div id="to-top" onclick="goToTop()">
         <img src="{% static 'image/arrow.svg' %}" />
     </div>
     <div id="header">
@@ -71,9 +71,11 @@
             <i class="lni lni-youtube"></i>
         </div>
     </div>
+    <div id="overlay" onclick="toggleSlider()"></div>
     {% block main %}{% endblock main %}
 
     <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/showToTop.js' %}"></script>
     {% block scripts %}{% endblock scripts %}
 </body>
 

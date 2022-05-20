@@ -2,8 +2,77 @@
 {% load static %}
 
 {% block style %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
 {% endblock %}
 
 {% block main %}
+<div id="hero">
+    <div class="container">
+        <div class="flexbox">
+            <div class="text">
+                <h1>Corporate & Business Site Template By Ayro UI.</h1>
+
+                <p>We are a digital agency that helps brands to achieve their business outcomes. We see technology
+                    as a tool to create amazing things.</p>
+                <div class="buttons">
+                    <a class="btn" type="bottun" href="#">get started</a>
+                    <a class="play" href="#">
+                        <img src="{% static 'image/play.svg' %}" alt="play" />
+                        <span>watch intro</span>
+                    </a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="{% static 'image/hero-image.jpg' %}" alt="hero image" />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="about-area">
+    <div class="container">
+        <div class="flexbox">
+            <div class="image">
+                <img src="{% static 'image/about.jpg' %}" alt="about us" />
+            </div>
+            <div class="text-area">
+                <h6>OUR STORY</h6>
+                <h2>Our team comes with the experience and knowledge</h2>
+                <div class="about-tabs">
+                    <div class="nav">
+                        <div class="nav-tabs">
+                            <a type="button" class="nav-btn active" onclick="showTab(event, 'nav-who')">who I am</a>
+                            <a type="button" class="nav-btn" onclick="showTab(event, 'nav-vision')">my vision</a>
+                            <a type="button" class="nav-btn" onclick="showTab(event, 'nav-history')">my history</a>
+                        </div>
+                    </div>
+                    <div class="paragraph about-tabs__content" id="nav-who">
+                        <p>Text 1 It is a long established fact that a reader will be distracted by the readable content of
+                            a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                            more-or-less normal distribution of letters, look like readable English.</p>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have in
+                            some form, by injected humour.</p>
+                    </div>
+                    <div class="paragraph about-tabs__content" id="nav-vision">
+                        <p>Text 2 It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                            more-or-less normal distribution of letters, look like readable English.</p>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have in some
+                            form, by injected humour.</p>
+                    </div>
+                    <div class="paragraph about-tabs__content" id="nav-history">
+                        <p>Text 3 It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                            more-or-less normal distribution of letters, look like readable English.</p>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have in some
+                            form, by injected humour.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock main %}
+
+{% block scripts %}
+    <script src="{% static 'js/tabs.js' %}"></script>
+{% endblock scripts %}
