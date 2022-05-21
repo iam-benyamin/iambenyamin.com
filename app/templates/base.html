@@ -22,18 +22,18 @@
         <div class="container">
             <div class="flexbox">
                 <div class="brand">
-                    <a href="https://demo.ayroui.com/templates/business-template/">
+                    <a href="iambenyamin.com">
                         <img src="{% static 'image/logo.svg' %}" />
                     </a>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a class="active" href="#hero">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{% url 'main:home' %}" onclick="goToTop()" class="active">Home</a></li>
+                        <li><a onclick="scrollToEelement('about-area')">My Story</a></li>
+                        <li><a onclick="scrollToEelement('services')">Services</a></li>
+                        <li><a onclick="scrollToEelement('portfolio')">Portfolio</a></li>
+                        <li><a onclick="scrollToEelement('blog-news')">News & Blog</a></li>
+                        <li><a onclick="scrollToEelement('contact')">Contact</a></li>
                     </ul>
                 </div>
                 <div class="navbar-btn" onclick="toggleSlider()">
@@ -47,7 +47,7 @@
             <i class="lni lni-close"></i>
         </div>
         <div class="brand">
-            <a href="https://demo.ayroui.com/templates/business-template/">
+            <a href="iambenyamin.com">
                 <img src="{% static 'image/blue-logo.svg' %}" />
             </a>
         </div>
@@ -72,9 +72,13 @@
         </div>
     </div>
     <div id="overlay" onclick="toggleSlider()"></div>
+
     {% block main %}{% endblock main %}
+    
+    <div id="footer"></div>
 
     <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/scrollTo.js' %}"></script>
     <script src="{% static 'js/showToTop.js' %}"></script>
     {% block scripts %}{% endblock scripts %}
 </body>
