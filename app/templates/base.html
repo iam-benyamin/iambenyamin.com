@@ -74,8 +74,51 @@
     <div id="overlay" onclick="toggleSlider()"></div>
 
     {% block main %}{% endblock main %}
-    
-    <div id="footer"></div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="flexbox">
+                <div class="copy-write">
+                    <div class="logo">
+                        <a href="{% url 'main:home' %}">
+                            <img src="{% static 'image/blue-logo.svg' %}" alt="#" class="img-fluid">
+                        </a>
+                    </div>
+                    <p class="copyright-text">
+                        © 2022 Benyamin Designed and Developed by <span>Benyamin Mahmoudyan</span> </a>
+                    </p>
+                </div>
+                <div class="services">
+                    <h5>services</h5>
+                    <ul>
+                        <li>app Development</li>
+                        <li>mentorship</li>
+                    </ul>
+                </div>
+                <div class="social-medias">
+                    <h5>social medias</h5>
+                    <ul>
+                        <li>telegram</li>
+                        <li>linkedin</li>
+                        <li>twitter</li>
+                        <li>youtube</li>
+                    </ul>
+                </div>
+                <div class="subscribe">
+                    <h5>subscribe</h5>
+                    <p>Subscribe to my blog for the latest updates</p>
+                    <form action="#" method="POST" class="subscribe-form" target="_blank">
+                        <input name="EMAIL" placeholder="Email address" required="required" type="email">
+                        <div class="button">
+                            <button class="subscribe-btn">
+                                <i class="lni lni-envelope"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="{% static 'js/slider.js' %}"></script>
     <script src="{% static 'js/scrollTo.js' %}"></script>
