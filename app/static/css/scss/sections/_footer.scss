@@ -47,7 +47,6 @@
                 position: relative;
                 margin-top: 30px;
                 input {
-
                     height: 55px;
                     width: 100%;
                     border-radius: 8px;
@@ -60,7 +59,6 @@
                     &:focus, &:focus-visible {
                         outline: none;
                         border-color: $primary_color;
-
                     }
                 }
                 .button {

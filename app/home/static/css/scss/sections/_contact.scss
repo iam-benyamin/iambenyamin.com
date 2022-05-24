@@ -1,0 +1,125 @@
+#contact {
+    margin: 100px auto 0;
+    .flexbox {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        .info {
+            .contact-item {
+                display: flex;
+                border: 1px solid $dark_color_4;
+                border-radius: 10px;
+                background: $white_color;
+                margin-bottom: 30px;
+                padding: 20px 30px;
+                transition: all .3s ease-out 0s;
+                .contact-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 22px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: $primary_color;
+                    color: $white_color;
+                    transition: all .3s ease-out 0s;
+                }
+                .contact-content {
+                    padding-left: 20px;
+                    line-height: 1.5;
+                    color: $dark_color_2;
+                    font-size: 1em;
+                    font-weight: 400;
+                    h4 {
+                        color: $primary_color;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                    }
+                }
+                &:hover {
+                    box-shadow: $box-shadow-1;
+                }
+            }
+        }
+        .form {
+            max-width: 60%;
+            .contact-form-header {
+                padding: 50px 40px;
+                background: $white_color;
+                border: 1px solid $dark_color_4;
+                margin-left: 0;
+                border-radius: 10px;
+                transition: all .3s ease-out 0s;
+                &:hover {
+                    box-shadow: $box-shadow-1;
+                }
+                .header {
+                    text-align: center;
+                    margin: 0 0.75rem 30px;
+                    span {
+                        font-weight: 700;
+                        font-size: 20px;
+                        color: $primary_color;
+                    }
+                    h2 {
+                        color: $dark_color_3;
+                        font-size: 36px;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 16px;
+                        color: $dark_color_2;
+                        margin: 0 0.75rem;
+                    }
+                }
+                form {
+                    display: block;
+                    margin-top: 0em;
+                    .main-form {
+                        input, textarea {
+                            padding: 15px 25px;
+                            border-radius: 30px;
+                            border: 1px solid $dark_color_4;
+                            margin-bottom: 25px;
+                            transition: all .3s ease-out 0s;
+                            font-size: 16px;
+                            &:focus, &:focus-visible {
+                                outline: none;
+                                border-color: $primary_color;
+                            }
+                        }
+                        input {
+                            width: 50%;
+                        }
+                        textarea {
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                    .button {
+                        text-align: center;
+                        button {
+                            all: unset;
+                            background-color: $primary_color;
+                            color: $white_color;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 20px;
+                            text-align: center;
+                            letter-spacing: .08em;
+                            text-transform: uppercase;
+                            padding: 12px 24px;
+                            border-radius: 25px;
+                            border: 1px solid transparent;
+                            &:hover {
+                                box-shadow: $box-shadow-2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
