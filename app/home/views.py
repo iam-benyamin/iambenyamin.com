@@ -1,9 +1,17 @@
-from multiprocessing import context
 from django.shortcuts import render
 
-# Create your views here.
+from home.models import (
+    Address as AddressModel,
+    Contact as ContactModel,
+    Schedule as ScheduleModel,
+)
+
+
 def home(request):
     context = {
-        'is': 'yes'
+        "address": AddressModel.objects.order_by('-date')[0],
+        "contact": ContactModel.objects.order_by('-date')[0],
+        "schedule": ScheduleModel.objects.order_by('-date')[0],
     }
+    print(context["address"])
     return render(request, template_name='home/home.html', context=context)

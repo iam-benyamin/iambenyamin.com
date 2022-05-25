@@ -521,8 +521,8 @@
                     </div>
                     <div class="contact-content">
                         <h4>Contact</h4>
-                        <p>0984537278623</p>
-                        <p>yourmail@gmail.com</p>
+                        <p>{{ contact.number }}</p>
+                        <p>{{ contact.email }}</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -531,8 +531,8 @@
                     </div>
                     <div class="contact-content">
                         <h4>Address</h4>
-                        <p>175 5th Ave, New York, NY 10010</p>
-                        <p>United States</p>
+                        <p>{{ address.address }}</p>
+                        <p>{{ address.country }}</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -541,8 +541,8 @@
                     </div>
                     <div class="contact-content">
                         <h4>Schedule</h4>
-                        <p>24 Hours / 7 Days Open</p>
-                        <p>Office time: 10 AM - 5:30 PM</p>
+                        <p>{{ schedule.days }}</p>
+                        <p>{{ schedule.time }}</p>
                     </div>
                 </div>
             </div>
