@@ -160,10 +160,12 @@
                     alteration in some form.</p>
             </div>
             <div class="video">
-                <img src="{% static 'image/video-bg.png' %}" alt="vidwo">
-                <div class="play-btn">
+                <video id="video-style" width="800" controls poster="{% static 'image/video-bg.png' %}">
+                    <source src="{% static 'video/intro.mp4' %}" type="video/mp4">
+                </video>
+                <!-- <div class="play-btn">
                     <i class="lni lni-play"></i>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

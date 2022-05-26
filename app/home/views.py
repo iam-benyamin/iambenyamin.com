@@ -13,5 +13,4 @@ def home(request):
         "contact": ContactModel.objects.order_by('-date')[0],
         "schedule": ScheduleModel.objects.order_by('-date')[0],
     }
-    print(context["address"])
     return render(request, template_name='home/home.html', context=context)

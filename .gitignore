@@ -17,3 +17,6 @@ __pycache__/
 # css 
 *.css
 *.css.map
+
+# static files
+*.mp4

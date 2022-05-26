@@ -8,6 +8,9 @@
         align-items: center;
         .video {
             position: relative;
+            #video-style {
+                border: none;
+            }
             .play-btn {
                 position: absolute;
                 top: 50%;
