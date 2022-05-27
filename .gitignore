@@ -20,3 +20,8 @@ __pycache__/
 
 # static files
 *.mp4
+
+# media files
+media/
+
+db.sqlite3

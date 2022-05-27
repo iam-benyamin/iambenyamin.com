@@ -19,12 +19,13 @@
                 color: $white_color ;
                 display: inline-block;
                 border-radius: 50%;
-                padding: 25px;
+                padding: 23px 23px 23px 29px;
                 background: $primary_color;
                 font-size: 30px;
                 &:hover {
                     background: $white_color;
                     color: $primary_color;
+                    cursor: pointer;
                 }
             }
         }

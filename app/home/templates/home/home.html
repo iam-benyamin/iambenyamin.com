@@ -160,12 +160,12 @@
                     alteration in some form.</p>
             </div>
             <div class="video">
-                <video id="video-style" width="800" controls poster="{% static 'image/video-bg.png' %}">
-                    <source src="{% static 'video/intro.mp4' %}" type="video/mp4">
+                <video id="video-style" width="800" poster="{{ video.thumbnail.url  }}">
+                    <source src="{{ video.video.url }}" type="video/mp4">
                 </video>
-                <!-- <div class="play-btn">
+                <div class="play-btn" onclick="playVideo()">
                     <i class="lni lni-play"></i>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -455,19 +455,19 @@
         </div>
     </div>
 </div>
-<div id="blog-news">
+<div id="blog">
     <div class="container">
         <div class="flexbox">
             <div class="title">
-                <h6>latest news</h6>
-                <h2>Latest News & Blog</h2>
+                <h6>latest article</h6>
+                <h2>Latest Blog</h2>
                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
                     alteration in some form.</p>
             </div>
             <div class="post">
                 <div class="post-item">
                     <div class="post-item__image">
-                        <img src="{% static 'image/blog-1.jpg' %}" alt="news" />
+                        <img src="{% static 'image/blog-1.jpg' %}" alt="blog 1" />
                     </div>
                     <div class="post-item__title">
                         <h4>
@@ -481,7 +481,7 @@
                 </div>
                 <div class="post-item">
                     <div class="post-item__image">
-                        <img src="{% static 'image/blog-2.jpg' %}" alt="news" />
+                        <img src="{% static 'image/blog-2.jpg' %}" alt="blog 2" />
                     </div>
                     <div class="post-item__title">
                         <h4>
@@ -495,7 +495,7 @@
                 </div>
                 <div class="post-item">
                     <div class="post-item__image">
-                        <img src="{% static 'image/blog-3.jpg' %}" alt="news" />
+                        <img src="{% static 'image/blog-3.jpg' %}" alt="blog" />
                     </div>
                     <div class="post-item__title">
                         <h4>
@@ -593,4 +593,5 @@
 
 {% block scripts %}
 <script src="{% static 'js/tabs.js' %}"></script>
+<script src="{% static 'js/playVideo.js' %}"></script>
 {% endblock scripts %}
