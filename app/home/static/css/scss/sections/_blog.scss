@@ -9,10 +9,14 @@
             max-width: 33%;
             text-align: left;
             .post-item__image {
+                margin: 10px 10px 25px 10px;
                 border-radius: 8px;
+                overflow: hidden;
                 img {
-                    max-width: 100%;
+                    width: 100%;
+                    height: 100%;
                     display: inline-block;
+                    transition: all 300ms;
                 }
             }
             .post-item__title {
@@ -21,7 +25,7 @@
                     letter-spacing: 1px;
                     font-weight: 600;
                     a {
-                        margin: 20px;
+                        margin: 10px;
                         color: $dark_color_3;
                         &:hover {
                             color: $primary_color;
@@ -30,14 +34,16 @@
                 }
             }
             .post-item__description {
+                margin: 10px;
                 p {
                     color: $dark_color_2;
                 }
             }
             &:hover {
                 .post-item__image {
-                    transform: scale(1.1) rotate(1deg);
-                    overflow: hidden;
+                    img {
+                        transform: scale(1.1) rotate(1deg);
+                    }
                 }
             }
         }

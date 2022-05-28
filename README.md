@@ -18,7 +18,6 @@ compile files with ``` scss --watch  file1.scss:file1.css file2.scss:file2.css `
 
 ### TODO
 
-- [ ] add all sections to home page
 - [ ] refactor code after above todo
 - [ ] Responsive 1200px, 992px, 768px, 597px
 - [ ] find better and simple way to use scss in django
