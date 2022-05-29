@@ -5,7 +5,8 @@
 ### compile scss files
 
 install scss with ``` npm install -g scss ```\
-compile files with ``` scss --watch  file1.scss:file1.css file2.scss:file2.css ```
+compile files with ``` scss --watch  file1.scss:file1.css file2.scss:file2.css ```\
+``` sass --watch --no-source-map static/css/scss/base.scss:static/css/base.css home/static/css/scss/home.scss:home/static/css/home.css blog/static/css/scss/blog.scss:blog/static/css/blog.css ```
 
 ### start django
 

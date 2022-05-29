@@ -78,6 +78,7 @@
                         font-size: 19px;
                         transition: all .4s ease;
                         &:hover {
+                            background-color: $dark_color;
                             cursor: pointer;
                         }
                     }

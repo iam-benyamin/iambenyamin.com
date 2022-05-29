@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+{% endblock style %}
+
+{% block main %}
+<div id="blog-list">
+    <div class="container">
+        <div class="flexbox">
+            {% for item in object_list %}
+            <div class="item">
+                <div class="item__image">
+                    <img src="{{ item.image.url }}" />
+                </div>
+                <div class="item__text-content">
+                    <div class="item__title">
+                        <h4 ><a href="#" >{{ item.title }}</a></h4>
+                    </div>
+                    <div class="item__discription" >
+                        <p>{{ item.discription|slice:":355" }}</p>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+                there is no article 
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock main %}
+
+{% block scripts %}{% endblock scripts %}

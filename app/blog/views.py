@@ -1,5 +1,9 @@
+from multiprocessing import get_context
 from django.shortcuts import render
+from django.views.generic.list import ListView
+from blog.models import Blog
 
-# Create your views here.
-def blog(request):
-    return render(request, 'blog/blog.html')
+
+class BlogListView(ListView):
+    model = Blog
+    template_name = 'blog/list_view.html'
