@@ -35,8 +35,8 @@
                         <li><a onclick="scrollToElement('portfolio')">Portfolio</a></li>
                         <li><a onclick="scrollToElement('blog')">Blog</a></li>
                         <li><a onclick="scrollToElement('contact')">Contact</a></li>
-                        {% elif request.get_full_path == '/blog/' %}
-                        <li><a onclick="scrollToElement('blog')">Blog</a></li>
+                        {% else %}
+                        <li><a href="{% url 'blog:list-view' %}" onclick="scrollToElement('blog')">Blog</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -63,7 +63,7 @@
             <ul>
                 <li><a href="#">about us</a></li>
                 <li><a href="#">our team</a></li>
-                <li><a href="#">latest Blog</a></li>
+                <li><a href="{% url 'blog:list-view' %}">Blog</a></li>
                 <li><a href="#">contact us</a></li>
             </ul>
         </div>
@@ -89,7 +89,7 @@
                         </a>
                     </div>
                     <p class="copyright-text">
-                        © 2022 Benyamin Designed and Developed by <span>Benyamin Mahmoudyan</span> </a>
+                        © 2022 Designed and Developed by <span>Benyamin Mahmoudyan</span></a>
                     </p>
                 </div>
                 <div class="services">

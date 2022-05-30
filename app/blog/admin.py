@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from blog.models import Blog as BlogModel
+from blog.models import Article as ArticleModel
 
 
-admin.site.register(BlogModel)
+admin.site.register(ArticleModel)

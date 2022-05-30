@@ -343,48 +343,21 @@
                     alteration in some form.</p>
             </div>
             <div class="post">
+                {% for item in articles %}
                 <div class="post-item">
                     <div class="post-item__image">
-                        <img src="{% static 'image/blog-1.jpg' %}" alt="blog 1" />
+                        <img src="{{ item.thumbnail.url }}" alt="blog 1" />
                     </div>
                     <div class="post-item__title">
                         <h4>
-                            <a href="#">Make your team a Design driven company</a>
+                            <a href="{% url 'blog:detail-view' item.id %}">{{ item.title }}</a>
                         </h4>
                     </div>
                     <div class="post-item__description">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard.</p>
+                        <p>{{ item.discription | slice:":120" }}</p>
                     </div>
                 </div>
-                <div class="post-item">
-                    <div class="post-item__image">
-                        <img src="{% static 'image/blog-2.jpg' %}" alt="blog 2" />
-                    </div>
-                    <div class="post-item__title">
-                        <h4>
-                            <a href="#">Make your team a Design driven company</a>
-                        </h4>
-                    </div>
-                    <div class="post-item__description">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard.</p>
-                    </div>
-                </div>
-                <div class="post-item">
-                    <div class="post-item__image">
-                        <img src="{% static 'image/blog-3.jpg' %}" alt="blog" />
-                    </div>
-                    <div class="post-item__title">
-                        <h4>
-                            <a href="#">Make your team a Design driven company</a>
-                        </h4>
-                    </div>
-                    <div class="post-item__description">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
