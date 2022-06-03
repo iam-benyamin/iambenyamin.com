@@ -5,6 +5,7 @@ from home.models import (
     Contact as ContactModel,
     Schedule as ScheduleModel,
     Video as VideoModel,
+    Hero as HeroModel,
 )
 from blog.models import Article as ArticleModel
 
@@ -16,5 +17,6 @@ def home(request):
         "schedule": ScheduleModel.objects.order_by('-date')[0],
         "video": VideoModel.objects.order_by('-date')[0],
         'articles': ArticleModel.objects.order_by('-date')[:3],
+        'hero': HeroModel.objects.order_by('-date')[0],
     }
     return render(request, template_name='home/home.html', context=context)

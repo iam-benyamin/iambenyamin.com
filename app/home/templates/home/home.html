@@ -10,20 +10,18 @@
     <div class="container">
         <div class="flexbox">
             <div class="text">
-                <h1>Corporate & Business Site Template By Ayro UI.</h1>
-
-                <p>We are a digital agency that helps brands to achieve their business outcomes. We see technology
-                    as a tool to create amazing things.</p>
+                <h1>{{ hero.header }}</h1>
+                <p>{{  hero.text }}</p>
                 <div class="buttons">
-                    <a class="btn" type="bottun" href="#">get started</a>
-                    <a class="play" href="#">
-                        <img src="{% static 'image/play.svg' %}" alt="play" />
+                    <a class="btn" type="bottun" onclick="scrollToElement('contact')">get started</a>
+                    <a class="play" onclick="scrollToElement('video-area');playVideo();">
+                        <span><i class="lni lni-play"></i></span>
                         <span>watch intro</span>
                     </a>
                 </div>
             </div>
             <div class="image">
-                <img src="{% static 'image/hero-image.jpg' %}" alt="hero image" />
+                <img src="{{ hero.thumbnail.url }}" alt="hero image" />
             </div>
         </div>
     </div>
