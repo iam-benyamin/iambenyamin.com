@@ -84,66 +84,17 @@
                 </p>
             </div>
             <div class="services-card">
+                {% for item in services %}
                 <div class="card">
                     <div class="icone">
-                        <i class="lni lni-capsule"></i>
+                        <i class="{{ item.icone }}"></i>
                     </div>
                     <div class="content">
-                        <h4>Refreshing Design</h4>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor
-                            dolore magna.</p>
+                        <h4>{{ item.title }}</h4>
+                        <p>{{ item.description }}</p>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="icone">
-                        <i class="lni lni-bootstrap"></i>
-                    </div>
-                    <div class="content">
-                        <h4>Solid Bootstrap 5</h4>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor
-                            dolore magna.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icone">
-                        <i class="lni lni-shortcode"></i>
-                    </div>
-                    <div class="content">
-                        <h4>100+ Components</h4>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor
-                            dolore magna.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icone">
-                        <i class="lni lni-dashboard"></i>
-                    </div>
-                    <div class="content">
-                        <h4>Speed Optimized</h4>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor
-                            dolore magna.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icone">
-                        <i class="lni lni-layers"></i>
-                    </div>
-                    <div class="content">
-                        <h4>Fully Customizable</h4>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor
-                            dolore magna.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icone">
-                        <i class="lni lni-reload"></i>
-                    </div>
-                    <div class="content">
-                        <h4>Regular Updates</h4>
-                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt labor
-                            dolore magna.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
