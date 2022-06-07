@@ -1,6 +1,25 @@
+@import "mixin";
+
 .container {
     margin: 0 auto;
     width: 1120px;
+
+    @include very_large_responsive {
+        max-width: 90%;
+        background-color: purple;
+    }
+    @include large_responsive {
+        max_width: 93%;
+        background-color: red;
+    }
+    @include medium_responsive {
+        max_width: 95%;
+        background-color: blue;
+    }
+    @include small_responsive {
+        max-width: 98%;
+        background-color: yellow;
+    }
 }
 .container-fluid {
     margin: 0 auto;
@@ -8,6 +27,7 @@
 }
 body {
     font-family: $font-family;
+    overflow: hidden;
 }
 
 .title {

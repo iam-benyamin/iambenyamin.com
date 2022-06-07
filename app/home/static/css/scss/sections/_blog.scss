@@ -1,18 +1,31 @@
+@import '../mixin';
+
 #blog {
-    padding: 90px;
+    padding: 90px auto;
     text-align: center;
     background: $white_color_2;
     .post {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: left;
         .post-item {
             max-width: 33%;
             text-align: left;
+            @include large_responsive {
+                min-width: 50%;
+            }
+            @include medium_responsive {
+                min-width: 100%;
+            }
             .post-item__image {
                 margin: 10px 10px 25px 10px;
                 border-radius: 8px;
                 overflow: hidden;
                 max-height: 250px;
+                @include medium_responsive {
+                    max-height: none;
+                }
                 img {
                     width: 100%;
                     height: 100%;

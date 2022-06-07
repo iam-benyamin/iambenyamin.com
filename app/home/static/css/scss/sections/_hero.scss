@@ -1,3 +1,5 @@
+@import "../mixin";
+
 #hero {
     padding: 160px 0 100px;
     background: $primary_color;
@@ -6,8 +8,16 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        align-items: center;
+        @include large_responsive {
+            flex-direction: column;
+        }
         .image {
             min-width: 50%;
+            @include large_responsive {
+                width: 100%;
+                margin-top: 40px;
+            }
             img {
                 width: 100%;
                 height: 100%;

@@ -4,15 +4,44 @@
         display: flex;
         flex-direction: row;
         padding: 120px 0 100px 0;
+        @include large_responsive {
+            flex-direction: column;
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+        @include medium_responsive {
+            width: 97%;
+        }
+        @include medium_responsive {
+            padding: inherit 0 inherit 0;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+        @include small_responsive {
+            padding: inherit 0 inherit 0;
+        }
         .image {
+            @include large_responsive {
+                width: 88%;
+            }
+            @include medium_responsive {
+                width: 94%;
+            }
             img {
-               flex-basis: 100%;
-               margin-left: 30px;
+                flex-basis: 100%;
+                margin-left: 30px;
+                @include large_responsive {
+                    width: 100%;
+                }
             }
         }
         .text-area {
             margin: 30px;
             padding: 20px;
+            @include small_responsive {
+                padding: 0;
+                margin: 30px 0 0 0;
+            }
             h6 {
                 position: relative;
                 padding-left: 30px;
@@ -43,6 +72,9 @@
                         background: $white_color_3;
                         padding: 15px;
                         border-radius: 5px;
+                        @include very_large_responsive {
+                            flex-wrap: wrap;
+                        }
                         .nav-btn {
                             cursor: pointer;
                             text-transform: capitalize;
@@ -54,6 +86,11 @@
                             padding: 10px;
                             &:hover {
                                 color: $primary_color;
+                            }
+                            @include medium_responsive {
+                                width: 100%;
+                                text-align: center;
+                                margin: 8px 5px;
                             }
                         }
                         .active {

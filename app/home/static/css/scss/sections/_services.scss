@@ -1,3 +1,6 @@
+@import "../mixin";
+
+
 #services {
     padding: 80px 0;
     .flexbox {
@@ -7,12 +10,26 @@
         .services-card {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
+            @include large_responsive {
+                justify-content: center;
+                gap: 4%;
+            }
             .card {
                 flex-basis: 30%;
-                margin: 0 30px 40px 0;
+                margin-bottom: 40px;
                 border: 1px solid $white_color_3;
                 border-radius: 10px;
                 padding: 40px 30px;
+                @include large_responsive {
+                    flex-basis: 40%;
+                }
+                @include medium_responsive {
+                    flex-basis: 70%;
+                }
+                @include small_responsive {
+                    flex-basis: 100%;
+                }
                 .icone {
                     margin-bottom: 35px;
                     color: $primary_color;
