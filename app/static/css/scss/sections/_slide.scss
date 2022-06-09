@@ -8,6 +8,9 @@
     z-index: 3;
     padding: 30px;
     transition: all 1s ease;
+    @include large_responsive {
+        overflow-x: scroll;
+    }        
     .close-button {
         float: right;
         &:hover {
@@ -15,9 +18,16 @@
             transition: all 0.5s ease;
         }
     }
-    .brand {
-        margin-top: 55px;
+    .logo {
+        margin-top: 60px;
         margin-bottom: 20px;
+        max-width: 200px;
+        a {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
     .description {
         color: $dark_color_2;
@@ -25,6 +35,10 @@
         line-height: 1.4;
     }
     .quick-links {
+        display: none;
+        @include large_responsive {
+            display: block;
+        }        
         margin-bottom: 15px;
         ul {
             li {

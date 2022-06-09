@@ -1,3 +1,5 @@
+@import "../mixin";
+
 #header {
     background: $primary_color;
     position: fixed;
@@ -9,8 +11,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include large_responsive {
+            padding: 20px 0;
+        }
+        .logo {
+            margin-top: 14px;
+            max-width: 200px;
+            a {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
         .menu {
             margin-right: 180px;
+            @include very_large_responsive {
+                margin-right: 100px;
+            }
             a {
                 cursor: pointer;
                 color: $white_color;
@@ -22,6 +40,9 @@
                     font-weight: 600;
                 }
             }
+            @include large_responsive {
+                display: none;
+            }
         }
         .navbar-btn i {
             padding: 10px;
@@ -29,6 +50,10 @@
             color: $white_color;
             border-radius: 50%;
             font-size: 19px;
+            @include large_responsive {
+                border: none;
+                font-size: 24px;
+            }
             &:hover {
                 background: $white_color;
                 color: $primary_color;

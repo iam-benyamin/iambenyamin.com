@@ -21,9 +21,9 @@
     <div id="header">
         <div class="container">
             <div class="flexbox">
-                <div class="brand">
+                <div class="logo">
                     <a href="iambenyamin.com">
-                        <img src="{% static 'image/logo.svg' %}" />
+                        <img src="{% static 'image/logo.png' %}" />
                     </a>
                 </div>
                 <div class="menu">
@@ -50,9 +50,9 @@
         <div class="close-button" onclick="toggleSlider()">
             <i class="lni lni-close"></i>
         </div>
-        <div class="brand">
+        <div class="logo">
             <a href="iambenyamin.com">
-                <img src="{% static 'image/blue-logo.svg' %}" />
+                <img src="{% static 'image/blue-logo.png' %}" />
             </a>
         </div>
         <div class="description">
@@ -61,10 +61,16 @@
         <div class="quick-links">
             <h2>Quick Links</h2>
             <ul>
-                <li><a href="#">about us</a></li>
-                <li><a href="#">our team</a></li>
-                <li><a href="{% url 'blog:list-view' %}">Blog</a></li>
-                <li><a href="#">contact us</a></li>
+                <li><a href="{% url 'main:home' %}" onclick="goToTop()" class="active">Home</a></li>
+                {% if request.get_full_path == '/' %}
+                <li><a onclick="scrollToElement('about-area')">My Story</a></li>
+                <li><a onclick="scrollToElement('services')">Services</a></li>
+                <li><a onclick="scrollToElement('portfolio')">Portfolio</a></li>
+                <li><a onclick="scrollToElement('blog')">Blog</a></li>
+                <li><a onclick="scrollToElement('contact')">Contact</a></li>
+                {% else %}
+                <li><a href="{% url 'blog:list-view' %}" onclick="scrollToElement('blog')">Blog</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="social-links">
@@ -85,7 +91,7 @@
                 <div class="copy-write">
                     <div class="logo">
                         <a href="{% url 'main:home' %}">
-                            <img src="{% static 'image/blue-logo.svg' %}" alt="#" class="img-fluid">
+                            <img src="{% static 'image/blue-logo.png' %}" alt="#" class="img-fluid">
                         </a>
                     </div>
                     <p class="copyright-text">

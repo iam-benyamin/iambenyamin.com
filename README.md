@@ -17,12 +17,16 @@ compile files with ``` scss --watch  file1.scss:file1.css file2.scss:file2.css `
 ``` python3 manage.py migrate ```\
 ``` python3 manage.py runserver ```
 
-### TODO's Version Beta
+### TODO's for next versions 
 
 - [ ] refactor code after above todo
-- [ ] Responsive 1200px, 992px, 768px, 597px
+- [ ] our recent work section
+- [ ] change styles for audios 
+- [ ] add comment sections for blog posts
+- [ ] SEO
 - [ ] find better and simple way to use scss in django
 - [ ] Dont repeat variables.scss
+
 
 <!-- UI modeled on -->
 <!-- https://demo.ayroui.com/templates/business-template/ -->

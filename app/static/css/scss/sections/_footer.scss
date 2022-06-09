@@ -1,3 +1,5 @@
+@import "../mixin";
+
 #footer {
     box-sizing: border-box;
     padding-top: 100px;
@@ -6,8 +8,15 @@
     .flexbox {
         display: flex;
         gap: 1.5rem;
+        @include large_responsive {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
         div {
             padding: 0 0.75rem 0 0.75rem;
+            @include medium_responsive {
+                text-align: center;
+            }
             h5, .logo {
                 font-weight: 700;
                 font-size: 1.25em;
@@ -22,6 +31,21 @@
         }
         .copy-write {
             width: 380px;
+            @include large_responsive {
+                width: 45%;
+            }
+            @include medium_responsive {
+                width: 100%;
+            }
+            .logo {
+                max-width: 250px;
+                a {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
             .copyright-text {
                 span {
                     color: $primary_dark_color;
@@ -29,10 +53,25 @@
             }
         }
         .services {
+            @include large_responsive {
+                width: 45%;
+            }
+            @include medium_responsive {
+                width: 100%;
+            }
             width: 190px;
             line-height: 2;
+            li {
+                display: list-item;
+            }
         }
         .social-medias {
+            @include large_responsive {
+                width: 45%;
+            }
+            @include medium_responsive {
+                width: 100%;
+            }
             width: 190px;
             line-height: 2;
             ul {
@@ -42,6 +81,12 @@
             }
         }
         .subscribe {
+            @include large_responsive {
+                width: 45%;
+            }
+            @include medium_responsive {
+                width: 100%;
+            }
             width: 380px;
             .subscribe-form {
                 position: relative;
