@@ -5,6 +5,7 @@ from home.admin.hero import HeroAdmin
 from home.admin.schedule import ScheduleAdmin
 from home.admin.service import ServiceAdmin
 from home.admin.video import VideoAdmin
+from home.admin.connect_me import ConnectMeAdmin
 
 from home.models import (
     Address as AddressModel,
@@ -13,6 +14,7 @@ from home.models import (
     Schedule as ScheduleModel,
     Service as ServiceModel,
     Video as VideoModel,
+    ConnectMe as ConnectMeModel,
 )
 
 
@@ -22,3 +24,4 @@ admin.site.register(ScheduleModel, ScheduleAdmin)
 admin.site.register(VideoModel, VideoAdmin)
 admin.site.register(HeroModel, HeroAdmin)
 admin.site.register(ServiceModel, ServiceAdmin)
+admin.site.register(ConnectMeModel, ConnectMeAdmin)

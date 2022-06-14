@@ -1,4 +1,5 @@
 from home.models.address import Address
+from home.models.connect_me import ConnectMe
 from home.models.contact import Contact
 from home.models.hero import Hero
 from home.models.schedule import Schedule

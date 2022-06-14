@@ -22,7 +22,7 @@
         <div class="container">
             <div class="flexbox">
                 <div class="logo">
-                    <a href="iambenyamin.com">
+                    <a href="https://www.iambenyamin.com/.com">
                         <img src="{% static 'image/logo.png' %}" />
                     </a>
                 </div>
@@ -51,34 +51,33 @@
             <i class="lni lni-close"></i>
         </div>
         <div class="logo">
-            <a href="iambenyamin.com">
+            <a href="https://www.iambenyamin.com/.com">
                 <img src="{% static 'image/blue-logo.png' %}" />
             </a>
         </div>
         <div class="description">
-            <p>Lorem ipsum dolor sit amet radicalising elite. Sapient fugal nisei rerum iusto intro.</p>
+            <p>
+                Design and development of professional, beautiful and optimized web applications for search engines (SEO)
+                with a dedicated code using the latest technologies of the year
+            </p>
         </div>
         <div class="quick-links">
             <h2>Quick Links</h2>
             <ul>
                 <li><a href="{% url 'main:home' %}" onclick="goToTop()" class="active">Home</a></li>
-                {% if request.get_full_path == '/' %}
                 <li><a onclick="scrollToElement('about-area')">My Story</a></li>
                 <li><a onclick="scrollToElement('services')">Services</a></li>
                 <li><a onclick="scrollToElement('portfolio')">Portfolio</a></li>
                 <li><a onclick="scrollToElement('blog')">Blog</a></li>
                 <li><a onclick="scrollToElement('contact')">Contact</a></li>
-                {% else %}
-                <li><a href="{% url 'blog:list-view' %}" onclick="scrollToElement('blog')">Blog</a></li>
-                {% endif %}
             </ul>
         </div>
         <div class="social-links">
             <h3>follow me on</h3>
-            <i class="lni lni-telegram-original"></i>
-            <i class="lni lni-linkedin-original"></i>
-            <i class="lni lni-twitter-original"></i>
-            <i class="lni lni-youtube"></i>
+            <a href="https://www.instagram.com/i4m_benyamin/" target="_blank" ><i class="lni lni-instagram-original"></i></a>
+            <a href="https://www.linkedin.com/in/iambenyamin/" target="_blank" ><i class="lni lni-linkedin-original"></i></a>
+            <a href="https://www.twitter.com/iam_benyamin/" target="_blank" ><i class="lni lni-twitter-original"></i></a>
+            <a href="https://www.t.me/i4m_benyamin/" target="_blank" ><i class="lni lni-telegram-original"></i></a>
         </div>
     </div>
     <div id="overlay" onclick="toggleSlider()"></div>
@@ -108,10 +107,10 @@
                 <div class="social-medias">
                     <h5>social medias</h5>
                     <ul>
-                        <li>telegram</li>
-                        <li>linkedin</li>
-                        <li>twitter</li>
-                        <li>youtube</li>
+                        <li><a href="https://www.instagram.com/i4m_benyamin/" target="_blank" >Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/iambenyamin/" target="_blank" >Linkedin</a></li>
+                        <li><a href="https://www.twitter.com/iam_benyamin/" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.t.me/i4m_benyamin/" target="_blank" >Telegram</a></li>
                     </ul>
                 </div>
                 <div class="subscribe">

@@ -10,7 +10,7 @@
     transition: all 1s ease;
     @include large_responsive {
         overflow-x: scroll;
-    }        
+    }
     .close-button {
         float: right;
         &:hover {
@@ -38,7 +38,7 @@
         display: none;
         @include large_responsive {
             display: block;
-        }        
+        }
         margin-bottom: 15px;
         ul {
             li {
@@ -65,14 +65,17 @@
             text-transform: capitalize;
             margin-bottom: 30px;
         }
-        i {
-            color: $dark_color_2;
-            padding: 10px;
-            border-radius: 50%;
-            transition: all 0.4s ease;
-            &:hover {
-                background: $primary_color;
-                color: $white_color;
+        a {
+            display: inline;
+            i {
+                color: $dark_color_2;
+                padding: 10px;
+                border-radius: 50%;
+                transition: all 0.4s ease;
+                &:hover {
+                    background: $primary_color;
+                    color: $white_color;
+                }
             }
         }
     }

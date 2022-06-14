@@ -44,6 +44,8 @@
                         </div>
                     </div>
                     <div class="paragraph about-tabs__content" id="nav-who">
+                        {% comment "dynamic this section" %}
+                        {% endcomment %}
                         <p>Text 1 It is a long established fact that a reader will be distracted by the readable content
                             of
                             a page when looking at its layout. The point of using Lorem Ipsum is that it has a
@@ -99,6 +101,7 @@
         </div>
     </div>
 </div>
+{% comment "responsive this section" %}{% endcomment %}
 <div id="video-area">
     <div class="container">
         <div class="flexbox">
@@ -109,7 +112,7 @@
                     alteration in some form.</p>
             </div>
             <div class="video">
-                <video id="video-style" width="800" poster="{{ video.thumbnail.url  }}">
+                <video id="video-style" poster="{{ video.thumbnail.url  }}">
                     <source src="{{ video.video.url }}" type="video/mp4">
                 </video>
                 <div class="play-btn" onclick="playVideo()">
@@ -366,7 +369,7 @@
                             </p>
                         </div>
                     </div>
-                    <form action="#" class="contact-form">
+                    <form action="{% url 'main:connect-me-view' %}" class="contact-form" method="get">
                         <div class="main-form">
                             <input type="text" name="name" id="name" placeholder="Name" required="">
                             <input type="email" name="email" id="email" placeholder="Email" required="">

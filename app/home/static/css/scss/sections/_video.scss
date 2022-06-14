@@ -1,3 +1,5 @@
+@import "../mixin";
+
 #video-area {
     background: $white_color_2;
     padding: 80px 0;
@@ -8,8 +10,14 @@
         align-items: center;
         .video {
             position: relative;
+            height: auto !important;
+            text-align: center;
             #video-style {
-                border: none;
+                border-radius: 8px;
+                width: calc((100% / 12) * 10) !important;
+                @include medium_responsive {
+                    width: 96% !important;
+                }
             }
             .play-btn {
                 position: absolute;
