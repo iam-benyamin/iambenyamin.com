@@ -11,7 +11,7 @@
         <div class="flexbox">
             <div class="text">
                 <h1>{{ hero.header }}</h1>
-                <p>{{  hero.text }}</p>
+                <p>{{ hero.text }}</p>
                 <div class="buttons">
                     <a class="btn" type="bottun" onclick="scrollToElement('contact')">get started</a>
                     <a class="play" onclick="scrollToElement('video-area');playVideo();">
@@ -44,8 +44,6 @@
                         </div>
                     </div>
                     <div class="paragraph about-tabs__content" id="nav-who">
-                        {% comment "dynamic this section" %}
-                        {% endcomment %}
                         <p>Text 1 It is a long established fact that a reader will be distracted by the readable content
                             of
                             a page when looking at its layout. The point of using Lorem Ipsum is that it has a
@@ -122,7 +120,6 @@
         </div>
     </div>
 </div>
-{% comment "TODO this section will be available in version 1" %}
 <div id="portfolio">
     <div class="container">
         <div class="flexbox">
@@ -236,7 +233,69 @@
         </div>
     </div>
 </div>
-{% endcomment %}
+<!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADA0lEQVRoge2YS0wTURSG/3NLiyGCEAqiMe4IjwZJjC5YaOJbl0aJASFBo8QEIyxM3Lo3LoyRKG4UGTRidOECN8YYNiw0LEhrSXxgjA9awEcU09LOcWFN2ul0mLlz64b5ky56zpnvnL+ncyct4MmTJ0+eVrPIKlnb8apN9+ndYOwkYBMAQcAHABMEjM1poadumqvgmxoInoyWUyJ9E8CxFa6fFBC9c1rTtJPBVfLzDNS0h9fCT89AvM3mPEsgnIiPhO7bKVbNF8YABzDoAA4AZWCMVHeHd9spVs3P2UCwK7KVmF8Y4za1EPCJho/DTQuFCorBN2yAT0nCAaA6kdYvWJeo5+cYIMYuSfjf64G+qvY36wrmi8A33gOb3TQAUOb3L+2xyCvnGw2kXDYASOy3yCrnGw28c8tnoNUirZxvvIkfu20AoNaivXJ+jgEh0lcBfHPZoKZQohj8HANzd1pjAE4D0F00WFMoUQx+3pM4roUeEOgogK+SDX5aJVXz8wwAQExrfhTwiXpmXARhCsDvzOstmIcF0z5iPmiKJyyuNIFKvuxTEZU9U5X+5YDZp/gkroUOyXKd8k03YEelabFsnuGoLFOGL22Ak6LOLE4knssyZfjSBlBCeQ0ISCb0lBIDdvnyBpjajCEdGP8+ukX2dJHiSxvQCQeMMWIakuXJ8qVOoZqecB2SmAWhNCv8Mq41bweIZZiyfLkNpGjAAAeTfl7F8E75jjcQ7IpsIOYogIosyI2YFjojNaxLvuMNEPO1bDiAyYrFQL/jSRXxHRkIHo8MADicFfrMad+R1+P1CWdjquP77MPDnQRcR+Zrx8B7kG/v/GjjrPTECvi2NhDsDPcScPtfPQERPa3vmB9pnHE7uFt+iVWytmN6PQtxBbl/Ad5KIdC/eK/+h6upFfFNT6GNHTPBFKXPMfFZAFWZ8BdivS822vLQ3dhq+aYbWBapCQCNmbe/CLjMSVyKjbVY/lixK5V8UwPMiBKhnIGhgF4y+Oluw7ybgf8335MnT548rR79ATzIgTvPHql6AAAAAElFTkSuQmCC"> -->
+<div id="testimonials">
+    <div class="container">
+        <div class="title">
+            <h6>Customer Reviews</h6>
+            <h2>Our Testimonials</h2>
+            <p>TThere are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                alteration in some form.</p>
+        </div>
+        <div class="reviews">
+            <div class="card">
+                <div class="card__text">
+                    <p >On the veniam optio vero, id quod voluptates voluptate distinctio tempore,  vero, id quod voluptates voluptate distinctio tempore
+                    deserunt, voluptatibus beatae.</p>
+                    <div class="card__quote">
+                        <i class="lni lni-quotation"></i>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="person__informations">
+                        <div class="person__image">
+                            <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
+                        </div>
+                        <div class="person__name">
+                            <p>Naimur Rahman</p>
+                        </div>
+                        <div class="person__job_position">
+                            <span>Web Entrepreneur</span>
+                        </div>
+                        <div class="person__link">
+                            <a href="#"><i class="lni lni-linkedin-original"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__text">
+                    <p >On the veniam optio vero, id quod voluptates voluptate distinctio tempore,  vero, id quod voluptates voluptate distinctio tempore
+                    deserunt, voluptatibus beatae.</p>
+                    <div class="card__quote">
+                        <i class="lni lni-quotation"></i>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="person__informations">
+                        <div class="person__image">
+                            <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
+                        </div>
+                        <div class="person__name">
+                            <p>Naimur Rahman</p>
+                        </div>
+                        <div class="person__job_position">
+                            <span>Web Entrepreneur</span>
+                        </div>
+                        <div class="person__link">
+                            <a href="#"><i class="lni lni-linkedin-original"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="call-to-action">
     <div class="container-fluid">
         <div class="call-to-action__title">
@@ -253,42 +312,6 @@
         </div>
     </div>
 </div>
-{% comment "TODO this section will be available in version 1" %}
-<div id="testimonials">
-    <div class="container">
-        <div class="title">
-            <h6>Customer Reviews</h6>
-            <h2>Our Testimonials</h2>
-            <p>TThere are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                alteration in some form.</p>
-        </div>
-        <div class="reviews">
-            <div class="card">
-                <p>On the other hand denoun with righteous and disliks men who are beguiled demorae momentc blinded by
-                    desire that can</p>
-                <div class="person">
-                    <div class="persion__image">
-                        <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                    </div>
-                    <p>Naimur Rahman</p>
-                    <span>Web Entrepreneur</span>
-                </div>
-            </div>
-            <div class="card">
-                <p>On the other hand denoun with righteous and disliks men who are beguiled demorae momentc blinded by
-                    desire that can</p>
-                <div class="person">
-                    <div class="persion__image">
-                        <img src="{% static 'image/author-2.jpg' %}" alt="author 1">
-                    </div>
-                    <p>Naimur Rahman</p>
-                    <span>Web Entrepreneur</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endcomment %}
 <div id="blog">
     <div class="container">
         <div class="flexbox">

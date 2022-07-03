@@ -17,20 +17,23 @@ compile files with ``` scss --watch  file1.scss:file1.css file2.scss:file2.css `
 ``` python3 manage.py migrate ```\
 ``` python3 manage.py runserver ```
 
-### TODO's for Beta
+### TODO's for versions 1
 
-- [x] all done
-
-### TODO's for next versions 
-
-- [ ] refactor code after above
-- [ ] our recent work section
-- [ ] change styles for audios 
-- [ ] add comment sections for blog posts
-- [ ] SEO
+- [ ] testimonials section
+    - [ ] home page style
+    - [ ] model and functionality
+    - [ ] show all 
+    - [ ] secound page
+- [ ] portfolio section
+- [ ] push notifications (django, javascript)
+- [ ] Send me email when someone send me message (Connect me form in home view) 
 - [ ] find better and simple way to use scss in django
 - [ ] Dont repeat variables.scss
-- [ ] Send me email when someone send me message (Connect me form in home view) 
+- [ ] refactor code after above
+    - [ ] header for mobile
+- [ ] add comment sections for blog posts
+    - [ ] contact me form
+- [ ] SEO
 
 
 <!-- UI modeled on -->
