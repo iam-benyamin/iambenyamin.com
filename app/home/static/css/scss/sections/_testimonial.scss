@@ -2,71 +2,75 @@
     background: $white_color_2;
     text-align: center;
     padding: 100px 0 80px;
-    .reviews {
-        display: flex;
-        .card {
+    .mySwiper {
+        .reviews {
             display: flex;
-            background-color: $white_color;
-            flex-basis: 50%;
-            margin: 25px;
-            border-radius: 8px;
-            flex-direction: column;
-            p {
-                margin: 20px;
-                text-align: left;
-            }
-            .card__text {
-                text-align: left;
-                position: relative;
+            margin-bottom: 30px;
+            .card {
+                z-index: 1;
+                display: flex;
+                background-color: $white_color;
+                margin: 25px;
+                border-radius: 8px;
+                flex-direction: column;
+                max-width: 514px;
                 p {
-                    font-weight: 500;
-                    color: $dark_color_2;
-                    line-height: 28px;
+                    margin: 20px;
+                    text-align: left;
                 }
-                .card__quote {
-                    position: absolute;
-                    color: $white_color_3;
-                    top: 100px;
-                    right: 70px;
-                    font-size: 70px;
-                    opacity: 0.4;
+                .card__text {
+                    text-align: left;
+                    position: relative;
+                    p {
+                        font-weight: 500;
+                        color: $dark_color_2;
+                        line-height: 28px;
+                    }
+                    .card__quote {
+                        position: absolute;
+                        color: $white_color_3;
+                        top: 100px;
+                        right: 70px;
+                        font-size: 70px;
+                        opacity: 0.4;
+                    }
                 }
-            }
-            .person {
-                margin-top: auto;
-                .person__informations {
-                    .person__image {
-                        float: left;
-                        margin: 20px 20px 10px 10px;
-                        img {
-                            border-radius: 50%;
-                            width: 75px;
+                .person {
+                    margin-top: auto;
+                    .person__informations {
+                        .person__image {
+                            float: left;
+                            margin: 20px 20px 10px 10px;
+                            img {
+                                border-radius: 50%;
+                                width: 75px;
+                            }
+                        }
+                        .person__name {
+                            padding-top: 5px;
+                            font-weight: 500;
+                            font-size: 20px;
+                        }
+                        .person__job_position {
+                            opacity: 0.6;
+                            font-size: 15px;
+                            margin: -17px 270px 0 0;
+                        }
+                        .person__link {
+                            color: $primary_color;
+                            float: right;
+                            a {
+                                margin-right: 10px;
+                                &:active {
+                                    color: $primary_color;
+                                }
+                                }
                         }
                     }
-                    .person__name {
-                        padding-top: 5px;
-                        font-weight: 500;
-                        font-size: 20px;
-                    }
-                    .person__job_position {
-                        opacity: 0.6;
-                        font-size: 15px;
-                        margin: -17px 270px 0 0;
-                    }
-                    .person__link {
-                        color: $primary_color;
-                        float: right;
-                        a {
-                            margin-right: 10px;
-                            &:active {
-                                color: $primary_color;
-                            }
-                            }
-                    }
                 }
-            }
-            &:hover {
-                box-shadow: $box-shadow-1;
+                &:hover {
+                    box-shadow: $box-shadow-1;
+                }
             }
         }
     }
