@@ -5,8 +5,8 @@
 ### compile scss files
 
 install scss with ``` npm install -g scss ```\
-compile files with ``` scss --watch  file1.scss:file1.css file2.scss:file2.css ```\ 
-or 
+compile files with ``` scss --watch  file1.scss:file1.css file2.scss:file2.css ```\
+or
 ``` sass --watch --no-source-map static/css/scss/base.scss:static/css/base.css home/static/css/scss/home.scss:home/static/css/home.css blog/static/css/scss/blog.scss:blog/static/css/blog.css ```
 
 ### start django
@@ -23,7 +23,7 @@ or
 - [ ] testimonials section
     - [ ] home page style
     - [ ] model and functionality
-    - [ ] show all 
+    - [ ] show all
     - [ ] secound page
 - [ ] portfolio section
     - [ ] home page style
@@ -33,13 +33,17 @@ or
     - [ ] secound page
 - [ ] links page
 - [ ] push notifications (django, javascript)
-- [ ] Send me email when someone send me message (Connect me form in home view) 
+- [ ] Send me mail, message in telegram when someone send me message (Connect me form in home view)
+    - [ ] Telegram
+    - [ ] Mail
 - [ ] find better and simple way to use scss in django
 - [ ] Dont repeat variables.scss
 - [ ] refactor code after above
     - [ ] header for mobile
 - [ ] add comment sections for blog posts
     - [ ] contact me form
+- [ ] site online chat (waich connect to telegram)
+- [ ] send me mail and telegram message with error happed
 - [ ] SEO
 
 
