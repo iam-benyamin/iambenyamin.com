@@ -44,6 +44,7 @@ or
     - [ ] contact me form
 - [ ] site online chat (waich connect to telegram)
 - [ ] send me mail and telegram message with error happed
+- [X] loading page
 - [ ] SEO
 
 

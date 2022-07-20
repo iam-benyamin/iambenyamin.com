@@ -6,17 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iam Benyamin</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/loading.js' %}"></script>
+
+    {% block style %}{% endblock style %}
 
     <!-- load icones -->
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
-    {% block style %}{% endblock style %}
 </head>
 
 <body>
     <div id="to-top" onclick="goToTop()">
         <img src="{% static 'image/arrow.svg' %}" />
+    </div>
+    <div id="loading">
+        <div class="loader"></div>
     </div>
     <div id="header">
         <div class="container">
