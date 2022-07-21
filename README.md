@@ -22,9 +22,10 @@ or
 
 - [ ] testimonials section
     - [ ] home page style
-    - [ ] model and functionality
-    - [ ] show all
-    - [ ] secound page
+    - [X] model
+    - [ ] create testimonial form
+    - [ ] show testimonials
+    - [ ] views all testimonial page
 - [ ] portfolio section
     - [ ] home page style
     - [ ] model and functionality

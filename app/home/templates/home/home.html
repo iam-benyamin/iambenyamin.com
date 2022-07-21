@@ -280,249 +280,32 @@
         </div>
         <div class="SwiperDiv swiper mySwiper">
             <div class="reviews swiper-wrapper">
-                <div class="card swiper-slide">
-                    <div class="card__text">
-                        <p>Text 1 On the veniam optio vero, id quod voluptates voluptate distinctio tempore, vero, id
-                            quod
-                            voluptates voluptate distinctio tempore
-                            deserunt, voluptatibus beatae.</p>
-                        <div class="card__quote">
-                            <i class="lni lni-quotation"></i>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__informations">
-                            <div class="person__image">
-                                <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                            </div>
-                            <div class="person__name">
-                                <p>Naimur Rahman</p>
-                            </div>
-                            <div class="person__job_position">
-                                <span>Web Entrepreneur</span>
-                            </div>
-                            <div class="person__link">
-                                <a href="#"><i class="lni lni-linkedin-original"></i></a>
+                {% for person in testimonials %}
+                    <div class="card swiper-slide">
+                        <div class="card__text">
+                            <p>{{ person.description }}</p>
+                            <div class="card__quote">
+                                <i class="lni lni-quotation"></i>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="card__text">
-                        <p>Text 2 On the veniam optio vero, id quod voluptates voluptate distinctio tempore, vero, id
-                            quod
-                            voluptates voluptate distinctio tempore
-                            deserunt, voluptatibus beatae.</p>
-                        <div class="card__quote">
-                            <i class="lni lni-quotation"></i>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__informations">
-                            <div class="person__image">
-                                <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                            </div>
-                            <div class="person__name">
-                                <p>Naimur Rahman</p>
-                            </div>
-                            <div class="person__job_position">
-                                <span>Web Entrepreneur</span>
-                            </div>
-                            <div class="person__link">
-                                <a href="#"><i class="lni lni-linkedin-original"></i></a>
+                        <div class="person">
+                            <div class="person__informations">
+                                <div class="person__image">
+                                    <img src="{{ person.profile_iamge.url }}"/>
+                                </div>
+                                <div class="person__name">
+                                    <p>{{ person.name }}</p>
+                                </div>
+                                <div class="person__job_position">
+                                    <span>{{ person.job_position }}</span>
+                                </div>
+                                <div class="person__link">
+                                    <a href="{{ person.social_media_address }}"><i class="lni lni-linkedin-original"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="card__text">
-                        <p>Text 3 On the veniam optio vero, id quod voluptates voluptate distinctio tempore, vero, id
-                            quod
-                            voluptates voluptate distinctio tempore
-                            deserunt, voluptatibus beatae.</p>
-                        <div class="card__quote">
-                            <i class="lni lni-quotation"></i>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__informations">
-                            <div class="person__image">
-                                <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                            </div>
-                            <div class="person__name">
-                                <p>Naimur Rahman</p>
-                            </div>
-                            <div class="person__job_position">
-                                <span>Web Entrepreneur</span>
-                            </div>
-                            <div class="person__link">
-                                <a href="#"><i class="lni lni-linkedin-original"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="card__text">
-                        <p>text 4 On the veniam optio vero, id quod voluptates voluptate distinctio tempore, vero, id
-                            quod
-                            voluptates voluptate distinctio tempore
-                            deserunt, voluptatibus beatae.</p>
-                        <div class="card__quote">
-                            <i class="lni lni-quotation"></i>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__informations">
-                            <div class="person__image">
-                                <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                            </div>
-                            <div class="person__name">
-                                <p>Naimur Rahman</p>
-                            </div>
-                            <div class="person__job_position">
-                                <span>Web Entrepreneur</span>
-                            </div>
-                            <div class="person__link">
-                                <a href="#"><i class="lni lni-linkedin-original"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="card__text">
-                        <p>Text 5 On the veniam optio vero, id quod voluptates voluptate distinctio tempore, vero, id
-                            quod
-                            voluptates voluptate distinctio tempore
-                            deserunt, voluptatibus beatae.</p>
-                        <div class="card__quote">
-                            <i class="lni lni-quotation"></i>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__informations">
-                            <div class="person__image">
-                                <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                            </div>
-                            <div class="person__name">
-                                <p>Naimur Rahman</p>
-                            </div>
-                            <div class="person__job_position">
-                                <span>Web Entrepreneur</span>
-                            </div>
-                            <div class="person__link">
-                                <a href="#"><i class="lni lni-linkedin-original"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="card__text">
-                        <p>Text 6 On the veniam optio vero, id quod voluptates voluptate distinctio tempore, vero, id
-                            quod
-                            voluptates voluptate distinctio tempore
-                            deserunt, voluptatibus beatae.</p>
-                        <div class="card__quote">
-                            <i class="lni lni-quotation"></i>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__informations">
-                            <div class="person__image">
-                                <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                            </div>
-                            <div class="person__name">
-                                <p>Naimur Rahman</p>
-                            </div>
-                            <div class="person__job_position">
-                                <span>Web Entrepreneur</span>
-                            </div>
-                            <div class="person__link">
-                                <a href="#"><i class="lni lni-linkedin-original"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="card__text">
-                        <p>Text 7 On the veniam optio vero, id quod voluptates voluptate distinctio tempore, vero, id
-                            quod
-                            voluptates voluptate distinctio tempore
-                            deserunt, voluptatibus beatae.</p>
-                        <div class="card__quote">
-                            <i class="lni lni-quotation"></i>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__informations">
-                            <div class="person__image">
-                                <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                            </div>
-                            <div class="person__name">
-                                <p>Naimur Rahman</p>
-                            </div>
-                            <div class="person__job_position">
-                                <span>Web Entrepreneur</span>
-                            </div>
-                            <div class="person__link">
-                                <a href="#"><i class="lni lni-linkedin-original"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="card__text">
-                        <p>Text 8 On the veniam optio vero, id quod voluptates voluptate distinctio tempore, vero, id
-                            quod
-                            voluptates voluptate distinctio tempore
-                            deserunt, voluptatibus beatae.</p>
-                        <div class="card__quote">
-                            <i class="lni lni-quotation"></i>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__informations">
-                            <div class="person__image">
-                                <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                            </div>
-                            <div class="person__name">
-                                <p>Naimur Rahman</p>
-                            </div>
-                            <div class="person__job_position">
-                                <span>Web Entrepreneur</span>
-                            </div>
-                            <div class="person__link">
-                                <a href="#"><i class="lni lni-linkedin-original"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="card__text">
-                        <p>Text 9 On the veniam optio vero, id quod voluptates voluptate distinctio tempore, vero, id
-                            quod
-                            voluptates voluptate distinctio tempore
-                            deserunt, voluptatibus beatae.</p>
-                        <div class="card__quote">
-                            <i class="lni lni-quotation"></i>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <div class="person__informations">
-                            <div class="person__image">
-                                <img src="{% static 'image/author-1.jpg' %}" alt="author 1">
-                            </div>
-                            <div class="person__name">
-                                <p>Naimur Rahman</p>
-                            </div>
-                            <div class="person__job_position">
-                                <span>Web Entrepreneur</span>
-                            </div>
-                            <div class="person__link">
-                                <a href="#"><i class="lni lni-linkedin-original"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <div class="pagination swiper-pagination"></div>
         </div>
