@@ -14,7 +14,7 @@ from home.models import (
     Video as VideoModel,
     ConnectMe as ConnectMeModel,
 )
-
+from testimonial.models import Testimonial as TestimonialModel
 
 def home(request):
     context = {
@@ -25,6 +25,7 @@ def home(request):
         'articles': ArticleModel.objects.order_by('-date')[:3],
         'services': ServiceModel.objects.order_by('-date')[:6],
         'hero': HeroModel.objects.order_by('-date')[0],
+        'testimonials': TestimonialModel.objects.order_by('-date'),
     }
     return render(request, template_name='home/home.html', context=context)
 
