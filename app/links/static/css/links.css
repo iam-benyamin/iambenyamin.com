@@ -1,0 +1,37 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+#links {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+#links .content {
+  width: 500px;
+  margin: 5px auto;
+  text-align: center;
+}
+#links .content a {
+  border: 2px solid #155bd5;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 12px 80px;
+  font-weight: 600;
+  color: #155bd5;
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+}
+#links .content .discription {
+  color: #6d6d6d;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 25px 0;
+}
