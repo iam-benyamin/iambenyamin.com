@@ -29,13 +29,13 @@
         <div class="container">
             <div class="flexbox">
                 <div class="logo">
-                    <a href="https://www.iambenyamin.com/.com">
+                    <a href="https://www.iambenyamin.com/">
                         <img src="{% static 'image/logo.png' %}" />
                     </a>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="{% url 'main:home' %}" onclick="goToTop()" class="active">Home</a></li>
+                        <li><a {% if request.get_full_path != '/' %}href="{% url 'main:home' %}"{% endif %} onclick="goToTop()" class="active">Home</a></li>
                         {% if request.get_full_path == '/' %}
                         <li><a onclick="scrollToElement('about-area')">My Story</a></li>
                         <li><a onclick="scrollToElement('services')">Services</a></li>
@@ -44,7 +44,12 @@
                         <li><a onclick="scrollToElement('blog')">Blog</a></li>
                         <li><a onclick="scrollToElement('contact')">Contact</a></li>
                         {% else %}
-                        <li><a href="{% url 'blog:list-view' %}" onclick="scrollToElement('blog')">Blog</a></li>
+                        <li><a 
+                            {% if request.get_full_path != '/blog/' %}
+                            href="{% url 'blog:list-view' %}"
+                            {% endif %} 
+                            onclick="goToTop()"
+                            >Blog</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -72,7 +77,7 @@
         <div class="quick-links">
             <h2>Quick Links</h2>
             <ul>
-                <li><a href="{% url 'main:home' %}" onclick="goToTop()" class="active">Home</a></li>
+                <li><a {% if request.get_full_path != '/' %}href="{% url 'main:home' %}"{% endif %} onclick="goToTop()" class="active">Home</a></li>
                 <li><a onclick="scrollToElement('about-area')">My Story</a></li>
                 <li><a onclick="scrollToElement('services')">Services</a></li>
                 <li><a onclick="scrollToElement('portfolio')">Portfolio</a></li>
@@ -103,7 +108,7 @@
                         </a>
                     </div>
                     <p class="copyright-text">
-                        © 2022 Designed and Developed by <span>Benyamin</span></a>
+                        © 2022 Designed and Developed by <span>Benyamin Mahmoudyan</span></a>
                     </p>
                 </div>
                 <div class="services">

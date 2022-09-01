@@ -12,7 +12,6 @@ class Testimonial(models.Model):
     social_media_address = models.URLField()
     description = models.TextField(max_length=180)
     created_at = models.DateTimeField(auto_now_add=True)
-    date = models.DateTimeField()
 
     def __str__(self):
         return f"{self.name}, {self.description[:50]}"

@@ -5,7 +5,7 @@ from testimonial.models import Testimonial as TestimonialModel
 
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = ['name', 'job_position', 'get_description']
-    ordering = ('-date',)
+    ordering = ('-created_at',)
 
     def get_description(self, obj):
         return obj.description[:60]

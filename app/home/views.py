@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
 
-from home.form import ConnectMeForm
+from home.forms import ConnectMeForm
 from home.models import (
     Address as AddressModel,
     ConnectMe as ConnectMeModel,
@@ -25,7 +25,7 @@ def home(request):
         'articles': ArticleModel.objects.order_by('-date')[:3],
         'services': ServiceModel.objects.order_by('-date')[:6],
         'hero': HeroModel.objects.order_by('-date')[0],
-        'testimonials': TestimonialModel.objects.order_by('-date'),
+        'testimonials': TestimonialModel.objects.all(),
     }
     return render(request, template_name='home/home.html', context=context)
 
