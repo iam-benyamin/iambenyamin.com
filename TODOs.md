@@ -14,9 +14,7 @@
     - [ ] show all project categorey
     - [ ] secound page
 
-- [ ] links page
-
-- [ ] push notifications (django, javascript)
+- [X] links page
 
 - [ ] send notifications (e.g. errors, contact me, etc...) in 
     - [ ] Telegram
