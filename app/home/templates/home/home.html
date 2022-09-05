@@ -278,36 +278,18 @@
             <p>TThere are many variations of passages of Lorem Ipsum available, but the majority have suffered
                 alteration in some form.</p>
         </div>
-        <div class="SwiperDiv swiper mySwiper">
-            <div class="reviews swiper-wrapper">
-                {% for person in testimonials %}
-                    <div class="card swiper-slide">
-                        <div class="card__text">
-                            <p>{{ person.description }}</p>
-                            <div class="card__quote">
-                                <i class="lni lni-quotation"></i>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="person__informations">
-                                <div class="person__image">
-                                    <img src="{{ person.profile_iamge.url }}"/>
-                                </div>
-                                <div class="person__name">
-                                    <p>{{ person.name }}</p>
-                                </div>
-                                <div class="person__job_position">
-                                    <span>{{ person.job_position }}</span>
-                                </div>
-                                <div class="person__link">
-                                    <a href="{{ person.social_media_address }}"><i class="lni lni-linkedin-original"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
+        <div class="testimonials-container">
+            <div class="progress-bar"></div>
+            <div class="fa fa-quote-right fa-quote"></div>
+            <div class="fa fa-quote-left fa-quote"></div>
+            <p class="testimonial">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam autem, velit quam magni nihil blanditiis earum quos voluptatem beatae quasi. Quas sit libero commodi aliquid! Harum aliquam fugiat perferendis adipisci.</p>
+            <div class="person-items">
+                <img class="logo" src="https://randomuser.me/api/portraits/men/43.jpg" alt="logo" />
+                <div class="user-details">
+                    <h4 class="username">Jonathan Nunfiez</h4>
+                    <p class="role">Graphic Designer</p>
+                </div>
             </div>
-            <div class="pagination swiper-pagination"></div>
         </div>
     </div>
 </div>
@@ -440,8 +422,5 @@
 {% block scripts %}
 <script src="{% static 'js/tabs.js' %}"></script>
 <script src="{% static 'js/playVideo.js' %}"></script>
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="{% static 'js/swiper.js' %}"></script>
+<script src="{% static 'js/testimonialSwiper.js' %}"></script>
 {% endblock scripts %}

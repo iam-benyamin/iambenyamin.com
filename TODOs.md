@@ -2,8 +2,9 @@
 ### versions 1
 
 - [ ] testimonials section
-    - [ ] home page style
-    - [X] model
+    - [X] home page style
+    - [X] model 
+    - [X] api view
     - [ ] create testimonial form
     - [X] show testimonials
 
@@ -27,8 +28,11 @@
 - [X] loading page
 - [ ] SEO
 
+- [ ] My story section
+- [ ] Contact me number change it to charfield
+
 
 ### version 2
 - [ ] products
-
 - [ ] blog posts
+- [ ] custom not fond page 404

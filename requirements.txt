@@ -1,3 +1,4 @@
 Django==3.2
 Pillow==9.1
-django-ckeditor
+django-ckeditor==6.4.2
+djangorestframework==3.13.1

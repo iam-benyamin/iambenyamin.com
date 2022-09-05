@@ -520,73 +520,74 @@
   text-align: center;
   padding: 100px 0 80px;
 }
-#testimonials .mySwiper .reviews {
-  display: flex;
-  margin-bottom: 30px;
-}
-#testimonials .mySwiper .reviews .card {
-  z-index: 1;
-  display: flex;
-  background-color: #ffffff;
-  margin: 25px;
-  border-radius: 8px;
-  flex-direction: column;
-  max-width: 514px;
-}
-#testimonials .mySwiper .reviews .card p {
-  margin: 20px;
-  text-align: left;
-}
-#testimonials .mySwiper .reviews .card .card__text {
-  text-align: left;
+#testimonials .testimonials-container {
+  background-color: #155bd5;
+  border-radius: 15px;
+  color: #ffffff;
+  margin: 20px auto;
+  max-width: 768px;
+  padding: 50px 80px;
   position: relative;
 }
-#testimonials .mySwiper .reviews .card .card__text p {
-  font-weight: 500;
-  color: #6d6d6d;
-  line-height: 28px;
+@media only screen and (max-width: 768px) {
+  #testimonials .testimonials-container {
+    padding: 20px 30px;
+  }
 }
-#testimonials .mySwiper .reviews .card .card__text .card__quote {
+#testimonials .testimonials-container .progress-bar {
+  background-color: #ffffff;
+  height: 4px;
+  width: 100%;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+}
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+#testimonials .testimonials-container .fa-quote {
+  color: #e0e0e0;
+  font-size: 32px;
   position: absolute;
-  color: #efefef;
-  top: 100px;
-  right: 70px;
-  font-size: 70px;
-  opacity: 0.4;
+  top: 70px;
 }
-#testimonials .mySwiper .reviews .card .person {
-  margin-top: auto;
+@media only screen and (max-width: 768px) {
+  #testimonials .testimonials-container .fa-quote {
+    display: none;
+  }
 }
-#testimonials .mySwiper .reviews .card .person .person__informations .person__image {
-  float: left;
-  margin: 20px 20px 10px 10px;
+#testimonials .testimonials-container .fa-quote-right {
+  left: 40px;
 }
-#testimonials .mySwiper .reviews .card .person .person__informations .person__image img {
+#testimonials .testimonials-container .fa-quote-left {
+  right: 40px;
+}
+#testimonials .testimonials-container .testimonial {
+  line-height: 28px;
+  text-align: justify;
+  margin: 10px auto;
+}
+#testimonials .testimonials-container .person-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#testimonials .testimonials-container .person-items .logo {
   border-radius: 50%;
+  height: 75px;
   width: 75px;
+  object-fit: cover;
 }
-#testimonials .mySwiper .reviews .card .person .person__informations .person__name {
-  padding-top: 5px;
-  font-weight: 500;
-  font-size: 20px;
+#testimonials .testimonials-container .person-items .user-details {
+  margin-left: 10px;
 }
-#testimonials .mySwiper .reviews .card .person .person__informations .person__job_position {
-  opacity: 0.6;
-  font-size: 15px;
-  margin: -17px 270px 0 0;
+#testimonials .testimonials-container .person-items .user-details .username {
+  margin: 0;
 }
-#testimonials .mySwiper .reviews .card .person .person__informations .person__link {
-  color: #155bd5;
-  float: right;
-}
-#testimonials .mySwiper .reviews .card .person .person__informations .person__link a {
-  margin-right: 10px;
-}
-#testimonials .mySwiper .reviews .card .person .person__informations .person__link a:active {
-  color: #155bd5;
-}
-#testimonials .mySwiper .reviews .card:hover {
-  box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+#testimonials .testimonials-container .person-items .user-details .role {
+  font-weight: normal;
+  margin: 2px 0;
 }
 
 #blog {

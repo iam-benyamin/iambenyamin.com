@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # installed apps
     'ckeditor',
+    'rest_framework',
 
     # my apps
     'home.apps.HomeConfig',
