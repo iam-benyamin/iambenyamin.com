@@ -14,15 +14,6 @@
         .logo {
             margin-top: 14px;
             max-width: 200px;
-            @include large_responsive {
-                max-width: 180px;
-            }
-            @include medium_responsive {
-                max-width: 160px;
-            }
-            @include small_responsive {
-                max-width: 140px;
-            }
             a {
                 img {
                     width: 100%;
