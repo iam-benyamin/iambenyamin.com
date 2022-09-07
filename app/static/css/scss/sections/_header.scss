@@ -14,6 +14,14 @@
         .logo {
             margin-top: 14px;
             max-width: 200px;
+            @include medium_responsive {
+                max-width: 210px;
+                margin-bottom: 8px;
+            }
+            @include medium_responsive {
+                max-width: 220px;
+                margin-bottom: 12px;
+            }
             a {
                 img {
                     width: 100%;
@@ -48,8 +56,12 @@
             border-radius: 50%;
             font-size: 19px;
             @include large_responsive {
-                border: none;
                 font-size: 24px;
+                margin-right: 5px;
+            }
+            @include medium_responsive {
+                font-size: 32px;
+                margin-right: 10px;
             }
             &:hover {
                 background: $white_color;

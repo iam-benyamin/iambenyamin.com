@@ -99,6 +99,18 @@ body {
   margin-top: 14px;
   max-width: 200px;
 }
+@media only screen and (max-width: 768px) {
+  #header .flexbox .logo {
+    max-width: 210px;
+    margin-bottom: 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #header .flexbox .logo {
+    max-width: 220px;
+    margin-bottom: 12px;
+  }
+}
 #header .flexbox .logo a img {
   width: 100%;
   height: auto;
@@ -136,8 +148,14 @@ body {
 }
 @media only screen and (max-width: 992px) {
   #header .flexbox .navbar-btn i {
-    border: none;
     font-size: 24px;
+    margin-right: 5px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #header .flexbox .navbar-btn i {
+    font-size: 32px;
+    margin-right: 10px;
   }
 }
 #header .flexbox .navbar-btn i:hover {

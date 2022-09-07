@@ -20,6 +20,6 @@ or
 ``` python3 manage.py runserver ```
 
 
-<!-- UI modeled on -->
 <!-- https://demo.ayroui.com/templates/business-template/ -->
-<!-- https://codesandbox.io/s/f78yv4?file=/index.html:231-358 -->
+<!-- https://fontawesome.com/ -->
+<!-- https://codepen.io/ -->
