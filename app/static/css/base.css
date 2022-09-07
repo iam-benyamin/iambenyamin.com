@@ -97,19 +97,8 @@ body {
 }
 #header .flexbox .logo {
   margin-top: 14px;
+  margin-bottom: 11px;
   max-width: 200px;
-}
-@media only screen and (max-width: 768px) {
-  #header .flexbox .logo {
-    max-width: 210px;
-    margin-bottom: 8px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  #header .flexbox .logo {
-    max-width: 220px;
-    margin-bottom: 12px;
-  }
 }
 #header .flexbox .logo a img {
   width: 100%;
@@ -148,13 +137,13 @@ body {
 }
 @media only screen and (max-width: 992px) {
   #header .flexbox .navbar-btn i {
-    font-size: 24px;
+    font-size: 23px;
     margin-right: 5px;
   }
 }
 @media only screen and (max-width: 768px) {
   #header .flexbox .navbar-btn i {
-    font-size: 32px;
+    font-size: 25px;
     margin-right: 10px;
   }
 }

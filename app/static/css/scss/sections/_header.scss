@@ -13,14 +13,10 @@
         align-items: center;
         .logo {
             margin-top: 14px;
+            margin-bottom: 11px;
             max-width: 200px;
             @include medium_responsive {
-                max-width: 210px;
-                margin-bottom: 8px;
-            }
-            @include medium_responsive {
-                max-width: 220px;
-                margin-bottom: 12px;
+
             }
             a {
                 img {
@@ -56,11 +52,11 @@
             border-radius: 50%;
             font-size: 19px;
             @include large_responsive {
-                font-size: 24px;
+                font-size: 23px;
                 margin-right: 5px;
             }
             @include medium_responsive {
-                font-size: 32px;
+                font-size: 25px;
                 margin-right: 10px;
             }
             &:hover {
