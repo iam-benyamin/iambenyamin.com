@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iam Benyamin</title>
-    
+
     <!-- loading -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/loading.css' %}" >
     <script src="{% static 'js/loading.js' %}"></script>
@@ -38,19 +38,10 @@
                     <ul>
                         <li><a {% if request.get_full_path != '/' %}href="{% url 'main:home' %}"{% endif %} onclick="goToTop()" class="active">Home</a></li>
                         {% if request.get_full_path == '/' %}
-                        <li><a onclick="scrollToElement('about-area')">My Story</a></li>
                         <li><a onclick="scrollToElement('services')">Services</a></li>
                         <li><a onclick="scrollToElement('portfolio')">Portfolio</a></li>
                         <li><a onclick="scrollToElement('testimonials')">Testimonials</a></li>
-                        <li><a onclick="scrollToElement('blog')">Blog</a></li>
                         <li><a onclick="scrollToElement('contact')">Contact</a></li>
-                        {% else %}
-                        <li><a 
-                            {% if request.get_full_path != '/blog/' %}
-                            href="{% url 'blog:list-view' %}"
-                            {% endif %} 
-                            onclick="goToTop()"
-                            >Blog</a></li>
                         {% endif %}
                     </ul>
                 </div>

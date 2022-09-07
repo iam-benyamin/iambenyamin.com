@@ -30,12 +30,12 @@ a {
 }
 @media only screen and (max-width: 992px) {
   .container {
-    max_width: 93%;
+    max-width: 93%;
   }
 }
 @media only screen and (max-width: 768px) {
   .container {
-    max_width: 95%;
+    max-width: 95%;
   }
 }
 @media only screen and (max-width: 597px) {
@@ -95,14 +95,24 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-@media only screen and (max-width: 992px) {
-  #header .flexbox {
-    padding: 20px 0;
-  }
-}
 #header .flexbox .logo {
   margin-top: 14px;
   max-width: 200px;
+}
+@media only screen and (max-width: 992px) {
+  #header .flexbox .logo {
+    max-width: 180px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #header .flexbox .logo {
+    max-width: 160px;
+  }
+}
+@media only screen and (max-width: 597px) {
+  #header .flexbox .logo {
+    max-width: 140px;
+  }
 }
 #header .flexbox .logo a img {
   width: 100%;

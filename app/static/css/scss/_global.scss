@@ -8,10 +8,10 @@
         max-width: 90%;
     }
     @include large_responsive {
-        max_width: 93%;
+        max-width: 93%;
     }
     @include medium_responsive {
-        max_width: 95%;
+        max-width: 95%;
     }
     @include small_responsive {
         max-width: 98%;
