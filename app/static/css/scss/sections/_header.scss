@@ -33,12 +33,11 @@
             a {
                 cursor: pointer;
                 color: $white_color;
-                opacity: 0.8;
+                opacity: 0.7;
                 padding: 20px 15px;
                 margin: 15px 0;
                 &.active {
                     opacity: 1;
-                    font-weight: 600;
                 }
             }
             @include large_responsive {
