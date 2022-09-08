@@ -655,7 +655,7 @@
 }
 
 #contact {
-  padding: 100px 0 0 0;
+  padding: 100px 0;
 }
 #contact .flexbox {
   display: flex;
