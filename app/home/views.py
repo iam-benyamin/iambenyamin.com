@@ -1,5 +1,6 @@
 from blog.models import Article as ArticleModel
-from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
 
@@ -28,18 +29,19 @@ def home(request):
     return render(request, template_name='home/home.html', context=context)
 
 
-
-# TODO write connect me form with class base
-class ConnectMeFormView(FormView):
-    form_class = ConnectMeForm
-    template_name = 'home/home.html'
-    model = ConnectMeModel
-    success_url = reverse_lazy('main:home')
-
-
 def connect_me_form_view(request):
-    if request.method == "GET":
-        form = ConnectMeForm(request.GET)
+    if request.method == "POST":
+        form = ConnectMeForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('main:home')
+            messages.success(request, "Hi! I received your message!"
+                             " I will try my best to answer you as soon as "
+                             "possible. Thank you for your patience"
+                             )
+            return redirect('/#contact')
+
+        messages.info(request, 'ohhhh!! Something went wrong, please try again! '
+                      'Or try other communication methods '
+                      'I look forward to receiving your message'
+                      )
+        return redirect('/#contact')

@@ -136,9 +136,22 @@
         </div>
     </div>
 
+
+    <div id="messages" class="{% if not messages %}hide{% endif %}" >
+        <div class="container">
+            <div class="massages__content">
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %}
+                <button onclick="toggleMassge()">Okay</button>
+            </div>
+        </div>
+    </div>
+    
     <script src="{% static 'js/slider.js' %}"></script>
     <script src="{% static 'js/scrollTo.js' %}"></script>
     <script src="{% static 'js/showToTop.js' %}"></script>
+    <script src="{% static 'js/toogleMessage.js' %}"></script>
     {% block scripts %}{% endblock scripts %}
 </body>
 

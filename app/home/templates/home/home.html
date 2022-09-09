@@ -385,12 +385,13 @@
                                 Ready to Get Started
                             </h2>
                             <p>
-                                At vero eos et accusamus et iusto odio dignissimos ducimus
-                                quiblanditiis praesentium
+                                You can tell me what you want through this form.
+                                Or you can use the other ways that I mentioned next to this form
                             </p>
                         </div>
                     </div>
-                    <form action="{% url 'main:connect-me-view' %}" class="contact-form" method="get">
+                    <form action="{% url 'main:connect-me-view' %}" class="contact-form" method="post">
+                        {% csrf_token %}
                         <div class="main-form">
                             <input type="text" name="name" id="name" placeholder="Name" required="">
                             <input type="email" name="email" id="email" placeholder="Email" required="">
