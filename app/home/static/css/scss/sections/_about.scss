@@ -21,11 +21,12 @@
             padding: inherit 0 inherit 0;
         }
         .image {
-            @include large_responsive {
-                width: 88%;
-            }
-            @include medium_responsive {
-                width: 94%;
+            position: relative;
+            z-index: 1;
+            svg {
+                position: absolute;
+                top: -30px;
+                z-index: -1;
             }
             img {
                 flex-basis: 100%;
@@ -33,6 +34,12 @@
                 @include large_responsive {
                     width: 100%;
                 }
+            }
+            @include large_responsive {
+                width: 88%;
+            }
+            @include medium_responsive {
+                width: 94%;
             }
         }
         .text-area {
