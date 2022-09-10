@@ -3,7 +3,9 @@ from django.contrib import messages
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
+from rest_framework.generics import ListAPIView
 
+from home.api.serializers import ServiceSerializer
 from home.forms import ConnectMeForm
 from home.models import (
     Address as AddressModel,
@@ -15,6 +17,7 @@ from home.models import (
     Video as VideoModel,
     ConnectMe as ConnectMeModel,
 )
+
 
 def home(request):
     context = {
@@ -45,3 +48,8 @@ def connect_me_form_view(request):
                       'I look forward to receiving your message'
                       )
         return redirect('/#contact')
+
+
+class ServiceView(ListAPIView):
+    serializer_class = ServiceSerializer
+    queryset = ServiceModel.objects.all()
