@@ -603,7 +603,10 @@
 }
 
 #blog {
-  padding: 90px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: auto;
+  padding-right: auto;
   text-align: center;
   background: #fafafa;
 }
