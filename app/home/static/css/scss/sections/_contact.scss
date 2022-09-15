@@ -80,6 +80,9 @@
             }
             .contact-form-header {
                 padding: 50px 40px;
+                @include small_responsive {
+                    padding: 20px 5px;
+                }
                 background: $white_color;
                 border: 1px solid $dark_color_4;
                 margin-left: 0;
