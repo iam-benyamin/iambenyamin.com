@@ -6,3 +6,6 @@ class Hero(models.Model):
     text = models.CharField(max_length=120)
     thumbnail = models.ImageField()
     date = models.DateTimeField()
+
+    def __str__(self):
+        return f"{self.header}, {self.text}"
