@@ -99,7 +99,7 @@
   flex-direction: row;
   padding: 120px 0 100px 0;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   #about-area .flexbox {
     flex-direction: column;
     padding-left: 8%;
@@ -136,7 +136,7 @@
   flex-basis: 100%;
   margin-left: 30px;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   #about-area .flexbox .image img {
     width: 100%;
   }
@@ -220,6 +220,9 @@
 #about-area .flexbox .text-area .about-tabs .nav .nav-tabs .active {
   color: #ffffff;
   background: #155bd5;
+}
+#about-area .flexbox .text-area .about-tabs .nav .nav-tabs .active:hover {
+  color: #ffffff;
 }
 #about-area .flexbox .text-area .paragraph {
   color: #6d6d6d;

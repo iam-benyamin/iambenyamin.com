@@ -1,13 +1,6 @@
 
 ### versions 1
 
-- [ ] testimonials section
-    - [X] home page style
-    - [X] model 
-    - [X] api view
-    - [ ] create testimonial form
-    - [X] show testimonials
-
 - [ ] portfolio section
     - [ ] home page style
     - [ ] model and functionality
@@ -15,24 +8,31 @@
     - [ ] show all project categorey
     - [ ] secound page
 
-- [X] links page
 
 - [ ] send notifications (e.g. errors, contact me, etc...) in 
     - [ ] Telegram
     - [ ] Mail
 
+
 - [ ] find better and simple way to use scss in django
 - [ ] Dont repeat variables.scss
-- [ ] header optimze size for mobile
-- [ ] site online chat (waich connect to telegram)
+
+
+- [X] testimonials section
+    - [X] home page style
+    - [X] model 
+    - [X] api view
+    - [X] show testimonials
+
+- [X] My story section
+- [X] header optimze size for mobile
+- [X] Contact me number change it to charfield
 - [X] loading page
-- [ ] SEO
-
-- [ ] My story section
-- [ ] Contact me number change it to charfield
-
+- [X] links page
 
 ### version 2
 - [ ] products
 - [ ] blog posts
 - [ ] custom not fond page 404
+- [ ] subscribe
+- [ ] SEO
