@@ -1,4 +1,4 @@
-const api_url = `${window.location.href}service-title/`;
+const servicesApiUrl = `${window.location.href}service-title/`;
 let data = [];
 const ul = document.querySelector("#footer > div > div > div.services > ul");
 let li = "";
@@ -12,4 +12,4 @@ async function getapi(url) {
     })
     ul.innerHTML = li;
 }
-getapi(api_url);
+getapi(servicesApiUrl);

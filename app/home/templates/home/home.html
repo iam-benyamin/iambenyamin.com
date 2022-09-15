@@ -163,28 +163,13 @@
                         </div>
                     </div>
                     <div class="paragraph about-tabs__content" id="nav-who">
-                        <p>Text 1 It is a long established fact that a reader will be distracted by the readable content
-                            of
-                            a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, look like readable English.</p>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have in
-                            some form, by injected humour.</p>
+                        <p>{{ my_story.who_i_am | safe }}</p>
                     </div>
                     <div class="paragraph about-tabs__content" id="nav-vision">
-                        <p>Text 2 It is a long established fact that a reader will be distracted by the readable content
-                            of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, look like readable English.</p>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have in some
-                            form, by injected humour.</p>
+                        <p>{{ my_story.my_vision | safe }}</p>
                     </div>
                     <div class="paragraph about-tabs__content" id="nav-history">
-                        <p>Text 3 It is a long established fact that a reader will be distracted by the readable content
-                            of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, look like readable English.</p>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have in some
-                            form, by injected humour.</p>
+                        <p>{{ my_story.my_history | safe }}</p>
                     </div>
                 </div>
             </div>

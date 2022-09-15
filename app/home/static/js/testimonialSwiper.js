@@ -4,7 +4,7 @@ const logo = testimonialsContainer.querySelector('.logo');
 const username = testimonialsContainer.querySelector('.username');
 const role = testimonialsContainer.querySelector('.role');
 
-const api_url = `${window.location.href}testimonial/`;
+const TestimonialApiUrl = `${window.location.href}testimonial/`;
 let idx = 1;
 let data = [];
 
@@ -12,7 +12,7 @@ async function getapi(url) {
     const response = await fetch(url);
     data = await response.json();
 }
-getapi(api_url);
+getapi(TestimonialApiUrl);
 
 function updateTestimonial() {
     let { name, job_position, profile_iamge, description } = data[idx];

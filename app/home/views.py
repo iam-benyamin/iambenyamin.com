@@ -16,6 +16,7 @@ from home.models import (
     Service as ServiceModel,
     Video as VideoModel,
     ConnectMe as ConnectMeModel,
+    MyStory as MyStoryModel,
 )
 
 
@@ -23,6 +24,7 @@ def home(request):
     context = {
         "address": AddressModel.objects.order_by('-date')[0],
         "contact": ContactModel.objects.order_by('-date')[0],
+        "my_story": MyStoryModel.objects.order_by('-date')[0],
         "schedule": ScheduleModel.objects.order_by('-date')[0],
         "video": VideoModel.objects.order_by('-date')[0],
         'articles': ArticleModel.objects.order_by('-date')[:3],
