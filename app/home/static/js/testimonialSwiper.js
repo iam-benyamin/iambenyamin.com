@@ -6,16 +6,16 @@ const role = testimonialsContainer.querySelector('.role');
 
 const TestimonialApiUrl = `${window.location.href}testimonial/`;
 let idx = 1;
-let data = [];
+let testimonialsData = [];
 
 async function getapi(url) {
     const response = await fetch(url);
-    data = await response.json();
+    testimonialsData = await response.json();
 }
 getapi(TestimonialApiUrl);
 
 function updateTestimonial() {
-    let { name, job_position, profile_iamge, description } = data[idx];
+    let { name, job_position, profile_iamge, description } = testimonialsData[idx];
 
     testimonial.innerHTML = description;
     logo.src = profile_iamge;
@@ -23,7 +23,7 @@ function updateTestimonial() {
     role.innerHTML = job_position;
 
     idx++;
-    if (idx > data.length - 1) {
+    if (idx > testimonialsData.length - 1) {
         idx = 0;
     }
 }
