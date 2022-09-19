@@ -1,4 +1,4 @@
-const servicesApiUrl = `${window.location.host}service-title/`;
+const servicesApiUrl = `${window.location.host}/service-title/`;
 let servicesData = [];
 const ul = document.querySelector("#footer > div > div > div.services > ul");
 let li = "";

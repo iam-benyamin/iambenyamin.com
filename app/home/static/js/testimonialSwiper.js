@@ -4,7 +4,7 @@ const logo = testimonialsContainer.querySelector('.logo');
 const username = testimonialsContainer.querySelector('.username');
 const role = testimonialsContainer.querySelector('.role');
 
-const TestimonialApiUrl = `${window.location.host}testimonial/`;
+const TestimonialApiUrl = `${window.location.host}/testimonial/`;
 let idx = 1;
 let testimonialsData = [];
 
