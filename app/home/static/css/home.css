@@ -668,6 +668,29 @@
 #blog .post .post-item:hover .post-item__image img {
   transform: scale(1.1) rotate(1deg);
 }
+#blog .button {
+  text-align: center;
+  margin: 70px auto 0px;
+}
+#blog .button a.btn {
+  all: unset;
+  background-color: #155bd5;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: 1px solid transparent;
+}
+#blog .button a.btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+  transition: all 0.3s ease-out 0s;
+}
 
 #contact {
   padding: 100px 0;
@@ -851,5 +874,5 @@
 }
 #contact .flexbox .form .contact-form-header form .button button:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
+  box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
 }

@@ -13,12 +13,13 @@ $black_1: #000000;
 $font-family: 'Inter', sans-serif;
 
 $box-shadow-1: 0px 2px 4px rgba(40, 41, 61, 0.04),
-               0px 8px 16px rgba(96, 97, 112, 0.16);
+    0px 8px 16px rgba(96, 97, 112, 0.16);
 
 $box-shadow-2: 0px 0px 1px rgba(40, 41, 61, 0.04),
-               0px 2px 4px rgba(96, 97, 112, 0.16);
+    0px 2px 4px rgba(96, 97, 112, 0.16);
 
-
+$box-shadow-3: 0px 4px 4px 4px rgb(79 81 122 / 30%),
+    0px 2px 8px 2px rgb(133 134 155 / 56%);
 // sizes for responsive
 $very_large_size : 1200px;
 $large_size : 992px;
