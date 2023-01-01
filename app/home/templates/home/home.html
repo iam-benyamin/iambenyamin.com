@@ -235,103 +235,40 @@
             <div class="content">
                 <div class="row">
                     <button class="active">all work</button>
-                    <button>branding</button>
-                    <button>marketing</button>
-                    <button>planing</button>
-                    <button>research</button>
+                    {% for item in branches %}
+                        <button>{{ item }}</button>
+                    {% endfor %}
                 </div>
                 <div class="card-area">
-                    <div class="card">
-                        <img src="{% static 'image/pf1.jpg' %}" alt="card" />
-                        <div class="withe-board">
-                            <div class="portfolio-icone">
-                                <div class="zoom">
-                                    <i class="lni lni-zoom-in"></i>
-                                </div>
-                                <div class="copy-link">
-                                    <i class="lni lni-link"></i>
+                    {% for item in portfolioes %}
+                        <div class="card">
+                            <div class="card__image">
+                                <img src="{{item.iamge.url }}" alt="card" />
+                            </div>
+                            <div class="withe-board">
+                                <div class="portfolio-icone">
+                                    <div class="zoom">
+                                        <i class="lni lni-zoom-in"></i>
+                                    </div>
+                                    <div class="copy-link">
+                                        <i class="lni lni-link"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <h4><a href="#">Graphics Design</a></h4>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'image/pf2.jpg' %}" alt="card" />
-                        <div class="withe-board">
-                            <div class="portfolio-icone">
-                                <div class="zoom">
-                                    <i class="lni lni-zoom-in"></i>
-                                </div>
-                                <div class="copy-link">
-                                    <i class="lni lni-link"></i>
-                                </div>
+                            <div>
+                                <h4><a href="{% url 'portfolio:detail-view' item.id %}">{{ item.title }}</a></h4>
+                            </div>
+                            <div>
+                                <p>{{ item.short_description }}</p>
                             </div>
                         </div>
-                        <h4><a href="#">web development</a></h4>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'image/pf3.jpg' %}" alt="card" />
-                        <div class="withe-board">
-                            <div class="portfolio-icone">
-                                <div class="zoom">
-                                    <i class="lni lni-zoom-in"></i>
-                                </div>
-                                <div class="copy-link">
-                                    <i class="lni lni-link"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <h4><a href="#">App Development</a></h4>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'image/pf4.jpg' %}" alt="card" />
-                        <div class="withe-board">
-                            <div class="portfolio-icone">
-                                <div class="zoom">
-                                    <i class="lni lni-zoom-in"></i>
-                                </div>
-                                <div class="copy-link">
-                                    <i class="lni lni-link"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <h4><a href="#">Digital Marketing</a></h4>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'image/pf5.jpg' %}" alt="card" />
-                        <div class="withe-board">
-                            <div class="portfolio-icone">
-                                <div class="zoom">
-                                    <i class="lni lni-zoom-in"></i>
-                                </div>
-                                <div class="copy-link">
-                                    <i class="lni lni-link"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <h4><a href="#">SEO Services</a></h4>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'image/pf6.jpg' %}" alt="card" />
-                        <div class="withe-board">
-                            <div class="portfolio-icone">
-                                <div class="zoom">
-                                    <i class="lni lni-zoom-in"></i>
-                                </div>
-                                <div class="copy-link">
-                                    <i class="lni lni-link"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <h4><a href="#">Product Design</a></h4>
-                        <p>Short description for the ones who look for something new. Awesome!</p>
-                    </div>
+                    {% endfor %}
                 </div>
+            </div>
+            <div class="button">
+                <a href="{% url 'portfolio:list-view' %}" class="btn">
+                    view all
+                </a>
             </div>
         </div>
     </div>

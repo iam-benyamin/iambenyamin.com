@@ -2,10 +2,11 @@
 ### versions 1
 - [ ] portfolio section
     - [X] home page style
-    - [ ] model and functionality
-    - [ ] show all by time
-    - [ ] show all project categorey
-    - [ ] secound page
+    - [X] model
+    - [ ] functionality in home (tabs) 
+    - [X] list view page 
+    - [X] detail view page
+    - [X] bottom view all at home
 
 - [ ] send contact me notifications with SMS
 
@@ -34,3 +35,9 @@
 - [ ] send notifications (e.g. errors, contact me, etc...) in
     - [ ] Mail
     - [ ] Telegram
+- [ ] <slug:pk> => <slug:slug> for SEO
+
+
+### version 3 
+
+- [ ] write test project

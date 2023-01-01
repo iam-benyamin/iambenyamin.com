@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'testimonial.apps.TestimonialConfig',
     'links.apps.LinksConfig',
+    'portfolio.apps.PortfolioConfig',
 ]
 
 MIDDLEWARE = [

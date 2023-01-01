@@ -18,6 +18,10 @@ from home.models import (
     ConnectMe as ConnectMeModel,
     MyStory as MyStoryModel,
 )
+from portfolio.models import (
+    Branch as BranchModel,
+    Portfolio as PortfolioModel
+)
 
 
 def home(request):
@@ -30,6 +34,8 @@ def home(request):
         'articles': ArticleModel.objects.order_by('-date')[:3],
         'services': ServiceModel.objects.order_by('-date')[:6],
         'hero': HeroModel.objects.order_by('-date')[0],
+        'branches': BranchModel.objects.order_by('-date'),
+        'portfolioes': PortfolioModel.objects.order_by('-date')[:6],
     }
     return render(request, template_name='home/home.html', context=context)
 

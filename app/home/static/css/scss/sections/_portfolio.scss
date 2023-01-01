@@ -58,9 +58,17 @@
                     }
                     padding: 12px;
                     position: relative;
-                    img {
-                        border-radius: 8px;
+                    .card__image {
                         width: 100%;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        max-height: 250px;
+                        img {
+                            border-radius: 8px;
+                            width: 100%;
+                            transition: all 300ms;
+                            display: inline-block;
+                        }
                     }
                     h4 {
                         a {
@@ -116,12 +124,38 @@
                         // .withe-board {
                         //     display: block;
                         // }
+                        img {
+                            transform: scale(1.1) rotate(1deg);
+                        }
                         h4 {
                             a {
                                 color: $primary_color;
                             }
                         }
                     }
+                }
+            }
+        }
+        .button {
+            text-align: center;
+            margin: 70px auto 0px;
+            a.btn {
+                all: unset;
+                background-color: $primary_color;
+                color: $white_color;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+                letter-spacing: .08em;
+                text-transform: uppercase;
+                padding: 12px 24px;
+                border-radius: 25px;
+                border: 1px solid transparent;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: $box-shadow-1;
+                    transition: all .3s ease-out 0s;
                 }
             }
         }
