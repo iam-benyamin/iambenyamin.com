@@ -234,14 +234,14 @@
             </div>
             <div class="content">
                 <div class="row">
-                    <button class="active">all work</button>
+                    <button class="active" onclick="togglePortfolioItem(event)" data-filter="all-work">all work</button>
                     {% for item in branches %}
-                        <button>{{ item }}</button>
+                        <button onclick="togglePortfolioItem(event)" data-filter="{{ item.data_filter }}">{{ item.name }}</button>
                     {% endfor %}
                 </div>
                 <div class="card-area">
                     {% for item in portfolioes %}
-                        <div class="card">
+                        <div class="card" data-filter="{{ item.branch.data_filter }}">
                             <div class="card__image">
                                 <img src="{{item.iamge.url }}" alt="card" />
                             </div>
@@ -422,4 +422,5 @@
 <script src="{% static 'js/playVideo.js' %}"></script>
 <script src="{% static 'js/testimonialSwiper.js' %}"></script>
 <script src="{% static 'js/scrollActiveHeader.js' %}"></script>
+<script src="{% static 'js/portfolioTabs.js' %}"></script>
 {% endblock scripts %}

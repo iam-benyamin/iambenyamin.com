@@ -1,14 +1,17 @@
 
 ### versions 1
-- [ ] portfolio section
+
+- [ ] send contact me notifications with SMS
+
+- [X] portfolio section
     - [X] home page style
     - [X] model
-    - [ ] functionality in home (tabs) 
+    - [X] tabs
     - [X] list view page 
     - [X] detail view page
     - [X] bottom view all at home
 
-- [ ] send contact me notifications with SMS
+
 
 - [X] testimonials section
     - [X] home page style
@@ -36,6 +39,7 @@
     - [ ] Mail
     - [ ] Telegram
 - [ ] <slug:pk> => <slug:slug> for SEO
+- [ ] header menu ['portfolio', 'blog']
 
 
 ### version 3 
