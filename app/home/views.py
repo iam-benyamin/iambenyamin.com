@@ -1,3 +1,5 @@
+import requests
+
 from blog.models import Article as ArticleModel
 from django.contrib import messages
 from django.shortcuts import redirect, render
@@ -42,9 +44,22 @@ def home(request):
 
 def connect_me_form_view(request):
     if request.method == "POST":
+        Token = 'https://console.melipayamak.com/api/send/simple/220260e87e25415a84e4532c7d02fea7'
         form = ConnectMeForm(request.POST)
         if form.is_valid():
             form.save()
+            name = form.cleaned_data.get('name')
+            subject = form.cleaned_data.get('subject')
+
+            print(f'name.lenght {len(name)}')
+            print(f'subject.lenght {len(subject)}')
+            
+            data = {
+                'from': '50004001667550',
+                'to': '09109667550',    
+                'text': f'A person named "{name}" is working with you about the "{subject}"\n\n https://b2n.ir/g57087',
+            }
+            response = requests.post(Token, json=data)
             messages.success(request, "Hi! I received your message!"
                              " I will try my best to answer you as soon as "
                              "possible. Thank you for your patience"

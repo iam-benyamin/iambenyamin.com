@@ -1,7 +1,7 @@
 
 ### versions 1
 
-- [ ] send contact me notifications with SMS
+- [X] send contact me notifications with SMS
 
 - [X] portfolio section
     - [X] home page style
@@ -10,7 +10,6 @@
     - [X] list view page 
     - [X] detail view page
     - [X] bottom view all at home
-
 
 
 - [X] testimonials section
@@ -28,6 +27,8 @@
 
 ### version 2
 
+- [ ] page for cv (descript my self, and client can download my cv pdf)
+- [ ] github actions
 - [ ] products
 - [ ] blog posts
 - [ ] custom not fond page 404
