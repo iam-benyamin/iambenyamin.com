@@ -1,30 +1,4 @@
 
-### versions 1
-
-- [X] send contact me notifications with SMS
-
-- [X] portfolio section
-    - [X] home page style
-    - [X] model
-    - [X] tabs
-    - [X] list view page 
-    - [X] detail view page
-    - [X] bottom view all at home
-
-
-- [X] testimonials section
-    - [X] home page style
-    - [X] model
-    - [X] api view
-    - [X] show testimonials
-
-- [X] My story section
-- [X] header optimze size for mobile
-- [X] Contact me number change it to charfield
-- [X] loading page
-- [X] links page
-
-
 ### version 2
 
 - [ ] page for cv (descript my self, and client can download my cv pdf)
