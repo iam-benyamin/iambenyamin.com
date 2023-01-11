@@ -54,7 +54,10 @@ INSTALLED_APPS = [
     'testimonial.apps.TestimonialConfig',
     'links.apps.LinksConfig',
     'portfolio.apps.PortfolioConfig',
+    'user.apps.UserConfig',
 ]
+
+AUTH_USER_MODEL = "user.User"  # new
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -96,6 +99,17 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+# 	'default': {
+# 		'ENGINE': 'django.db.backends.postgresql',
+# 		'NAME': 'iambeny1_site',
+# 		'USER': 'iambeny1_me',
+# 		'PASSWORD': 'Q]puFoY$a=+O',
+# 		'HOST': 'localhost',
+# 		'PORT': '5432',
+# 	}
+# }
 
 
 # Password validation
