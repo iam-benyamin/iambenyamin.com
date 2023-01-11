@@ -1,7 +1,7 @@
 
 ### version 2
 
-- [ ] split setting.py 
+- [X] split setting.py 
 - [ ] write manual for deploy on cpanel in readme
 - [ ] page for cv (descript my self, and client can download my cv pdf)
 - [ ] github actions

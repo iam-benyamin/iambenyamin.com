@@ -1,6 +1,4 @@
-# Iam Benyamin
-
-## start app
+# start app on local
 
 ### compile scss files
 
@@ -17,7 +15,7 @@ or
 ``` pip3 install -r requirements.txt ```\
 ``` python3 manage.py makemigrations ```\
 ``` python3 manage.py migrate ```\
-``` python3 manage.py runserver ```
+"``` python3 manage.py runserver --settings=config.settings.development ```" or "``` python3 manage.py runserver --settings=config.settings.production ```"
 
 
 <!-- https://demo.ayroui.com/templates/business-template/ -->
