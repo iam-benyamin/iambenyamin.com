@@ -1,6 +1,7 @@
 import requests
 
 from blog.models import Article as ArticleModel
+from config.settings.local import melipayamak_token
 from django.contrib import messages
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
@@ -44,7 +45,6 @@ def home(request):
 
 def connect_me_form_view(request):
     if request.method == "POST":
-        Token = 'https://console.melipayamak.com/api/send/simple/220260e87e25415a84e4532c7d02fea7'
         form = ConnectMeForm(request.POST)
         if form.is_valid():
             form.save()
@@ -53,23 +53,27 @@ def connect_me_form_view(request):
 
             print(f'name.lenght {len(name)}')
             print(f'subject.lenght {len(subject)}')
-            
+
             data = {
                 'from': '50004001667550',
-                'to': '09109667550',    
+                'to': '09109667550',
                 'text': f'A person named "{name}" is working with you about the "{subject}"\n\n https://b2n.ir/g57087',
             }
-            response = requests.post(Token, json=data)
-            messages.success(request, "Hi! I received your message!"
-                             " I will try my best to answer you as soon as "
-                             "possible. Thank you for your patience"
-                             )
+            response = requests.post(melipayamak_token, json=data)
+            messages.success(
+                request,
+                "Hi! I received your message!"
+                " I will try my best to answer you as soon as "
+                "possible. Thank you for your patience"
+            )
             return redirect('/#contact')
 
-        messages.info(request, 'ohhhh!! Something went wrong, please try again! '
-                      'Or try other communication methods '
-                      'I look forward to receiving your message'
-                      )
+        messages.info(
+            request,
+            'ohhhh!! Something went wrong, please try again! '
+            'Or try other communication methods '
+            'I look forward to receiving your message'
+        )
         return redirect('/#contact')
 
 

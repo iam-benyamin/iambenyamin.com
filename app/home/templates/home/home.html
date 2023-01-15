@@ -51,6 +51,7 @@
                 <p>{{ hero.text }}</p>
                 <div class="buttons">
                     <a class="btn" type="bottun" onclick="scrollToElement('contact')">get started</a>
+                    <a class="btn" type="bottun" href="{% url 'portfolio:cv-view' 'Benyamin-Mahmoudyan' %}">My CV</a>
                     <a class="play" onclick="scrollToElement('video-area');playVideo();">
                         <span><i class="lni lni-play"></i></span>
                         <span>watch intro</span>

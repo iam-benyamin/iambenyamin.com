@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/portfolio.css' %}">
+{% endblock style %}
+
+{% block main %}
+<div id="cv-detail">
+    <div class="container">
+        <div class="flexbox">
+            <div class="cv">
+                <div class="cv__body" >
+                    {{ object.body | safe}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

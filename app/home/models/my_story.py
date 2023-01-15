@@ -8,4 +8,4 @@ class MyStory(models.Model):
     date = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.who_i_am[40]}, {self.my_history[40]}, {self.my_vision[40]}"
+        return f"{self.who_i_am[:20]}, {self.my_history[:20]}, {self.my_vision[:20]}"

@@ -114,3 +114,38 @@
 #portfolio-detail .flexbox .portfolio .portfolio__customer-opinion h3 {
   margin: 20px 0 10px 0;
 }
+
+#cv-detail {
+  margin-top: 100px;
+  min-height: 20vh;
+  margin-bottom: 100px;
+}
+#cv-detail .flexbox {
+  display: flex;
+  justify-content: center;
+}
+#cv-detail .flexbox .cv {
+  max-width: 668px;
+  margin: 10px;
+}
+#cv-detail .flexbox .cv img {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 668px;
+  height: auto;
+  margin: 15px auto;
+}
+#cv-detail .flexbox .cv a {
+  color: #155bd5;
+  display: inline-block;
+}
+#cv-detail .flexbox .cv .cv__body {
+  color: #6d6d6d;
+  line-height: 1.6;
+  font-size: 17px;
+}
+#cv-detail .flexbox .cv .cv__body pre {
+  border-left: 2px solid #155bd5;
+  padding-left: 20px;
+  margin-left: 5px;
+}
