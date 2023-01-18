@@ -4,6 +4,7 @@
 - [X] split setting.py 
 - [X] page for cv (descript my self, and client can download my cv pdf)
 - [X] <slug:pk> => <slug:slug> for SEO
+- [X] header menu ['portfolio', 'blog']
 
 - [ ] write manual for deploy on cpanel in readme
 - [ ] github actions
@@ -13,7 +14,6 @@
 - [ ] SEO
 - [ ] find better and simple way to use scss in django
 - [ ] Dont repeat variables.scss
-- [ ] header menu ['portfolio', 'blog']
 
 
 ### version 3 
