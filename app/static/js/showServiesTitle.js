@@ -1,10 +1,10 @@
-const servicesApiUrl = `${window.location.host}/service-title/`;
+const servicesApiUrl = `/service-title/`;
 let servicesData = [];
 const ul = document.querySelector("#footer > div > div > div.services > ul");
 let li = "";
 
 
-async function getapi(url) {
+async function getServiesAPI(url) {
     const response = await fetch(url);
     servicesData = await response.json();
     servicesData.forEach(item => {
@@ -12,4 +12,4 @@ async function getapi(url) {
     })
     ul.innerHTML = li;
 }
-getapi(servicesApiUrl);
+getServiesAPI(servicesApiUrl);

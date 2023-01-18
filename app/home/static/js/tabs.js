@@ -12,4 +12,4 @@ function showTab(e, tabName) {
     e.currentTarget.className += " active";
 }
 
-showTab();
+document.querySelector("#about-area .text-area .nav a:nth-child(1)").click()
