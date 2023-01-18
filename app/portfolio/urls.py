@@ -10,7 +10,7 @@ from portfolio.views import (
 app_name = 'portfolio'
 
 urlpatterns = [
-    path('', PortfolioListView.as_view(), name='list-view'),
-    path('detail/<slug:pk>/', PortfolioDetailView.as_view(), name='detail-view'),
+    path('list/', PortfolioListView.as_view(), name='list-view'),
+    path('detail/<slug:slug>/', PortfolioDetailView.as_view(), name='detail-view'),
     path('<slug:slug>/', MyCVDetailView.as_view(), name='cv-view'),
 ]

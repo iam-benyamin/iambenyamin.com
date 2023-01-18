@@ -15,7 +15,7 @@
             </div>
             <div class="item__text-content">
                 <div class="item__title">
-                    <h4><a href="{% url 'blog:detail-view' item.id %}">{{ item.title }}</a></h4>
+                    <h4><a href="{% url 'blog:detail-view' item.slug %}">{{ item.title }}</a></h4>
                 </div>
                 <div class="item__discription">
                     <p>{{ item.discription }}</p>

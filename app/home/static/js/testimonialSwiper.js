@@ -5,7 +5,7 @@ const username = testimonialsContainer.querySelector('.username');
 const role = testimonialsContainer.querySelector('.role');
 
 const TestimonialApiUrl = `/testimonial/`;
-let idx = 1;
+let idx = 0;
 let testimonialsData = [];
 
 async function getTestimonialAPI(url) {

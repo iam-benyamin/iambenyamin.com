@@ -25,3 +25,8 @@ __pycache__/
 media/
 
 db.sqlite3
+
+# server side 
+stderr.log
+passenger_wsgi.py
+tem/

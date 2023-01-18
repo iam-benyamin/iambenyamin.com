@@ -4,6 +4,7 @@ from ckeditor.fields import RichTextField
 
 
 class Portfolio(models.Model):
+    slug = models.SlugField(max_length=200)
     iamge = models.ImageField()
     title = models.CharField(max_length=80)
     short_description = models.CharField(max_length=255)

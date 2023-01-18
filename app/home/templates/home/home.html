@@ -257,7 +257,7 @@
                                 </div>
                             </div>
                             <div>
-                                <h4><a href="{% url 'portfolio:detail-view' item.id %}">{{ item.title }}</a></h4>
+                                <h4><a href="{% url 'portfolio:detail-view' item.slug %}">{{ item.title }}</a></h4>
                             </div>
                             <div>
                                 <p>{{ item.short_description }}</p>
@@ -330,7 +330,7 @@
                     </div>
                     <div class="post-item__title">
                         <h4>
-                            <a href="{% url 'blog:detail-view' item.id %}">{{ item.title }}</a>
+                            <a href="{% url 'blog:detail-view' item.slug %}">{{ item.title }}</a>
                         </h4>
                     </div>
                     <div class="post-item__description">
