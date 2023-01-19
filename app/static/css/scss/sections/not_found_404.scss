@@ -1,0 +1,40 @@
+@import "../variables";
+@import "../mixin";
+
+body {
+    background: $dark_color_3;
+    color: $white_color_4;
+    font-family: "Courier new";
+    font-size: 18px;
+    line-height: 1.5em;
+    cursor: default;
+}
+
+#not-found {
+    a {
+        color: $white_color;
+    }
+
+    .code-area {
+        position: absolute;
+        width: $small_size;
+        min-width: $small_size;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        >span {
+            display: block;
+        }
+        @include small_responsive {
+            font-size: 5vw;
+            min-width: auto;
+            width: 95%;
+            margin: auto;
+            padding: 5px;
+            padding-left: 10px;
+            line-height: 6.5vw;
+        }
+    }
+}

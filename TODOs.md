@@ -5,15 +5,14 @@
 - [X] page for cv (descript my self, and client can download my cv pdf)
 - [X] <slug:pk> => <slug:slug> for SEO
 - [X] header menu ['portfolio', 'blog']
+- [X] custom not fond page 404
 
 - [ ] write manual for deploy on cpanel in readme
 - [ ] github actions
 - [ ] blog posts
-- [ ] custom not fond page 404
-- [ ] subscribe
 - [ ] SEO
 - [ ] find better and simple way to use scss in django
-- [ ] Dont repeat variables.scss
+- [ ] static file DEBUG=False dose not work
 
 
 ### version 3 
@@ -23,3 +22,6 @@
     - [ ] Telegram
 - [ ] products
 - [ ] write test project
+- [ ] Dont repeat variables.scss
+- [ ] subscribe
+- [ ] not found page code to django
