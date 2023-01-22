@@ -48,8 +48,10 @@
   margin-top: 40px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 #hero .flexbox .text .buttons .btn {
+  margin-top: 10px;
   display: inline-block;
   color: #155bd5;
   background: #ffffff;
@@ -68,6 +70,7 @@
   cursor: pointer;
 }
 #hero .flexbox .text .buttons .play {
+  margin-top: 10px;
   color: #ffffff;
   display: flex;
   width: 170px;

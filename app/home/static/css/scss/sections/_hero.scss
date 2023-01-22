@@ -43,7 +43,9 @@
                 margin-top: 40px;
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 .btn {
+                    margin-top: 10px;
                     display: inline-block;
                     color: $primary_color;
                     background: $white_color;
@@ -62,6 +64,7 @@
                     }
                 }
                 .play {   
+                    margin-top: 10px;
                     color: $white_color;
                     display: flex;
                     width: 170px;
