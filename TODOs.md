@@ -11,7 +11,6 @@
 - [ ] github actions
 - [ ] blog posts
 - [ ] SEO
-- [ ] find better and simple way to use scss in django
 - [ ] static file DEBUG=False dose not work
 
 
@@ -24,4 +23,5 @@
 - [ ] write test project
 - [ ] Dont repeat variables.scss
 - [ ] subscribe
-- [ ] not found page code to django
+- [ ] http redirect to https
+- [ ] find better and simple way to use scss in django

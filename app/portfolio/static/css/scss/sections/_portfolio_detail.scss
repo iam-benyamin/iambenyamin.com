@@ -38,9 +38,10 @@
                 line-height: 1.6;
                 font-size: 17px;
                 pre {
-                    border-left: 2px solid $primary_color;
-                    padding-left: 20px;
-                    margin-left: 5px;
+                    border-radius: 8px;
+                    margin: 10px 0;
+                    padding: 15px;
+                    background-color: $white_color_4;
                 }
             }
             .portfolio__customer-opinion {
