@@ -21,3 +21,21 @@ or
 <!-- https://demo.ayroui.com/templates/business-template/ -->
 <!-- https://fontawesome.com/ -->
 <!-- https://codepen.io/ -->
+
+
+# deploy on cpanel
+
+## django app
+
+create python app with cpanel python section \
+import my app wsgi in to passenger_wsgi \
+clone or pull code \
+python3 manage.py migrate --settings=config.settings.production \ or 
+python3 manage.py collectstatic --settings=config.settings.production
+
+## Database 
+
+create user \
+create db \
+assign user to db \
+from cpanel -> database -> PostgreSQL Database
