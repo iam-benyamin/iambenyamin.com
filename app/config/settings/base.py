@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # installed apps
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'ckeditor',
     'rest_framework',
 
@@ -45,6 +47,8 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'user.apps.UserConfig',
 ]
+
+SITE_ID = 1
 
 AUTH_USER_MODEL = "user.User"
 

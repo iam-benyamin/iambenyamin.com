@@ -15,21 +15,46 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.sitemaps.views import sitemap
 from django.contrib import admin
 from django.urls import include, path
 
+from blog.sitemaps import ArticleSitemeps
+from home.sitemaps import HomeSitemaps
+from portfolio.sitemaps import CVSitemaps, PortfolioSitemeps
+from links.sitemaps import LinkSitemaps
+from config.views import RobotsView
+
+
+app_name = 'main'
+
+sitemaps = {
+    'home': HomeSitemaps,
+    'cv': CVSitemaps,
+    'links': LinkSitemaps,
+    'portfolio': PortfolioSitemeps,
+    'blog': ArticleSitemeps,
+}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('blog/', include('blog.urls')),
-    path('testimonial/', include('testimonial.urls')),
     path('links/', include('links.urls')),
     path('portfolio/', include('portfolio.urls')),
+    path('robots.txt/', RobotsView.as_view(), name='robots'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name="dj-sitemaps"),
+    path('testimonial/', include('testimonial.urls')),
 ]
 
 handler404 = "config.views.page_not_found_view"
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(
+        settings.STATIC_URL,
+        document_root=settings.STATIC_ROOT
+    )
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT
+    )

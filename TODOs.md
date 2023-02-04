@@ -6,11 +6,10 @@
 - [X] <slug:pk> => <slug:slug> for SEO
 - [X] header menu ['portfolio', 'blog']
 - [X] custom not fond page 404
+- [X] write manual for deploy on cpanel in readme
+- [X] SEO
 
-- [ ] write manual for deploy on cpanel in readme
 - [ ] github actions
-- [ ] blog posts
-- [ ] SEO
 - [ ] static file DEBUG=False dose not work
 
 
@@ -25,3 +24,6 @@
 - [ ] subscribe
 - [ ] http redirect to https
 - [ ] find better and simple way to use scss in django
+
+
+### version 4
