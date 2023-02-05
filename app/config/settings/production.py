@@ -4,6 +4,9 @@ from config.settings.base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# security redirect http to https
+SECURE_SSL_REDIRECT = True
+
 ALLOWED_HOSTS = [
     'iambenyamin.com',
     'www.iambenyamin.com',
