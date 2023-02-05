@@ -30,3 +30,6 @@ db.sqlite3
 stderr.log
 passenger_wsgi.py
 tem/
+
+# environ
+app/config/settings/local.py

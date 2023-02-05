@@ -37,14 +37,15 @@ sitemaps = {
 }
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('home.urls')),
+    path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
     path('links/', include('links.urls')),
     path('portfolio/', include('portfolio.urls')),
     path('robots.txt/', RobotsView.as_view(), name='robots'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name="dj-sitemaps"),
     path('testimonial/', include('testimonial.urls')),
+    path('user/', include('user.urls'))
 ]
 
 handler404 = "config.views.page_not_found_view"

@@ -124,8 +124,9 @@
                 <div class="subscribe">
                     <h5>subscribe</h5>
                     <p>Subscribe to my blog for the latest updates</p>
-                    <form action="#" method="POST" class="subscribe-form" target="_blank">
-                        <input name="EMAIL" placeholder="Email address" required="required" type="email">
+                    <form action="{% url 'user:subscribe-email' %}" method="POST" class="subscribe-form">
+                        {% csrf_token %}
+                        <input type="email" name="email" id='email' placeholder="Your email address" required="required" >
                         <div class="button">
                             <button class="subscribe-btn">
                                 <i class="lni lni-envelope"></i>

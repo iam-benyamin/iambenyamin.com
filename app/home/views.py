@@ -50,10 +50,6 @@ def connect_me_form_view(request):
             form.save()
             name = form.cleaned_data.get('name')
             subject = form.cleaned_data.get('subject')
-
-            print(f'name.lenght {len(name)}')
-            print(f'subject.lenght {len(subject)}')
-
             data = {
                 'from': '50004001667550',
                 'to': '09109667550',
