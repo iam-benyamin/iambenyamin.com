@@ -29,7 +29,7 @@ db.sqlite3
 # server side 
 stderr.log
 passenger_wsgi.py
-tem/
+tmp/
 
 # environ
 app/config/settings/local.py
