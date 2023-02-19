@@ -32,4 +32,3 @@ passenger_wsgi.py
 tmp/
 
 # environ
-app/config/settings/local.py
