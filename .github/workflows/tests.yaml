@@ -3,7 +3,7 @@ name: test
 on: [pull_request, push]
 
 jobs:
-  test_project:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
