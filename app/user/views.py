@@ -20,7 +20,7 @@ def subscribe_email_view(request):
                         'Here I try to publish useful articles in the field of computer and programming<br />'
                         'List of my current <a href="https://iambenyamin.com/blog/list/">articles</a>.<br />'
                         'I hope you like it<br />'
-                        'And if you want to communicate with me, you can use this email or use <a href="https://iambenyamin.com/#contact">this form</a>.<br /><br />'
+                        'And if you want to communicate with me, you can use <a href="mailto:benyaminmahmoudyan@gmail.com">my email</a> or use <a href="https://iambenyamin.com/#contact">this form</a>.<br /><br />'
                         '<p style="color: #696969; font-size: 12px; margin-bottom: -4px;">Benyamin Mahmoudyan</p>'
                         '<a href="https://iambenyamin.com" style="color:#696969;font-size:12px;display: inline-block;">iambenyamin.com</a><br />',
                 from_email=settings.EMAIL_HOST_USER,
