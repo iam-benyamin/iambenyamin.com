@@ -6,6 +6,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-%6kym9b97q#v@*u@qfvb2t2v&2!e*e8n58f#&4*c1be3b+2&uj'
+
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = {
     'default': {

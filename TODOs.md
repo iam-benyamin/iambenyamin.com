@@ -1,6 +1,6 @@
 ### version 3 fix & complite content on site
 
-- [ ] fix error 101 send mail
+- [X] fix error 101 send mail
 - [ ] wirte good cv
 - [ ] intro video 
 - [ ] intro header 
