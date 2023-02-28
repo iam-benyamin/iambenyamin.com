@@ -1,6 +1,8 @@
 ### version 3 fix & complite content on site
 
 - [X] fix error 101 send mail
+- [X] menu bar on mobile
+
 - [ ] wirte good cv
 - [ ] intro video 
 - [ ] intro header 
@@ -13,7 +15,6 @@
 - [ ] subscribers once for each mail address
 - [ ] blog ui fix (with, margin-bottom, code section, inline code)
 - [ ] blog and portfolio list view
-- [ ] menu bar on mobile
 - [ ] static file DEBUG=False dose not work
 
 ### version 4

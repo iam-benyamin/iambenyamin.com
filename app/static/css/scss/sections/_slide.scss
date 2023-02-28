@@ -3,6 +3,7 @@
     top: 0;
     right: 0;
     width: 345px;
+    max-width: 80%;
     height: 100%;
     background: $white_color;
     z-index: 3;
@@ -12,7 +13,8 @@
         overflow-x: scroll;
     }
     .close-button {
-        float: right;
+        position: fixed;
+        right: 30px;
         &:hover {
             transform: rotate(180deg);
             transition: all 0.5s ease;

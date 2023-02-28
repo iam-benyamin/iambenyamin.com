@@ -156,6 +156,7 @@ body {
   top: 0;
   right: 0;
   width: 345px;
+  max-width: 80%;
   height: 100%;
   background: #ffffff;
   z-index: 3;
@@ -168,7 +169,8 @@ body {
   }
 }
 #slide .close-button {
-  float: right;
+  position: fixed;
+  right: 30px;
 }
 #slide .close-button:hover {
   transform: rotate(180deg);

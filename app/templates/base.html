@@ -76,13 +76,19 @@
         <div class="quick-links">
             <h2>Quick Links</h2>
             <ul>
-                <li><a {% if request.get_full_path != '/' %}href="{% url 'main:home' %}"{% endif %} onclick="goToTop()" class="active">Home</a></li>
+                <li><a {% if request.get_full_path != '/' %}href="{% url 'main:home' %}"{% endif %} onclick="goToTop()">Home</a></li>
+                {% if request.get_full_path == '/' %}
                 <li><a onclick="scrollToElement('about-area')">My Story</a></li>
                 <li><a onclick="scrollToElement('services')">Services</a></li>
                 <li><a onclick="scrollToElement('portfolio')">Portfolio</a></li>
                 <li><a onclick="scrollToElement('testimonials')">Testimonials</a></li>
                 <li><a onclick="scrollToElement('blog')">Blog</a></li>
                 <li><a onclick="scrollToElement('contact')">Contact</a></li>
+                {% else %}
+                <li><a href="{% url 'portfolio:list-view' %}" >Portfolio</a></li>
+                <li><a href="{% url 'blog:list-view' %}" >Blog</a></li>
+                <li><a href="{% url 'portfolio:cv-view' 'Benyamin-Mahmoudyan' %}">my CV</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="social-links">
