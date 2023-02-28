@@ -1,0 +1,23 @@
+@mixin very_large_responsive {
+    @media only screen and (max-width: $very_large_size) {
+        @content;
+    }
+}
+
+@mixin large_responsive {
+    @media only screen and (max-width: $large_size) {
+        @content;
+    }
+}
+
+@mixin medium_responsive {
+    @media only screen and (max-width: $medium_size) {
+        @content;
+    }
+}
+
+@mixin small_responsive {
+    @media only screen and (max-width: $small_size) {
+        @content;
+    }
+}

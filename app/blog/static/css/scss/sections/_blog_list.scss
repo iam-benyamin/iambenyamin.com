@@ -1,9 +1,15 @@
+@import '../mixin';
+
 #blog-list {
     margin-top: 100px;
     min-height: 20vh;
     .item {
         margin-bottom: 15px;
         display: flex;
+        @include small_responsive {
+            flex-direction: column;
+            align-items: center;
+        }
         .item__image {
             margin: 10px;
             border-radius: 8px;
@@ -11,6 +17,11 @@
             max-width: 25%;
             min-width: 25%;
             max-height: 250px;
+            @include small_responsive {
+                max-width: 100%;
+                min-width: 50%;
+                max-height: 500px;
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -19,6 +30,7 @@
             }
         }
         .item__text-content {
+            width: 100%;
             .item__title {
                 h4 {
                     font-size: 24px;

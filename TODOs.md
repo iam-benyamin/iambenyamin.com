@@ -2,6 +2,8 @@
 
 - [X] fix error 101 send mail
 - [X] menu bar on mobile
+- [X] blog ui fix (with, margin-bottom, code section, inline code)
+- [X] blog and portfolio list view
 
 - [ ] wirte good cv
 - [ ] intro video 
@@ -13,8 +15,6 @@
 - [ ] add all medium article to my site blog section
 - [ ] each client can send two time massage in content me section
 - [ ] subscribers once for each mail address
-- [ ] blog ui fix (with, margin-bottom, code section, inline code)
-- [ ] blog and portfolio list view
 - [ ] static file DEBUG=False dose not work
 
 ### version 4

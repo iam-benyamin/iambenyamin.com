@@ -6,7 +6,8 @@
         display: flex;
         justify-content: center;
         .portfolio {
-            max-width: 668px;
+            width: 668px;
+            max-width: 100%;
             margin: 10px;
             img {
                 border-radius: 8px;
@@ -38,6 +39,7 @@
                 line-height: 1.6;
                 font-size: 17px;
                 pre {
+                    overflow-x: auto;
                     border-radius: 8px;
                     margin: 10px 0;
                     padding: 15px;
