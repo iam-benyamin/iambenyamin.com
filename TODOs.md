@@ -5,16 +5,17 @@
 - [X] blog ui fix (with, margin-bottom, code section, inline code)
 - [X] blog and portfolio list view
 - [X] subscribers once for each mail address
+- [X] my story
+    - [X] remove dot's in smail devices
+    - [X] custom my story header section
 
 - [ ] wirte good cv
 - [ ] intro video 
 - [ ] intro header 
-- [ ] my story
-    - [ ] remove dot's in smail devices
-    - [ ] custom my story header section
 - [ ] testimonals ui fix (remove first loream)
 - [ ] add all medium article to my site blog section
 - [ ] each client can send two time massage in content me section
+
 - [ ] static file DEBUG=False dose not work
 
 ### version 4
