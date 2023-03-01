@@ -4,6 +4,7 @@
 - [X] menu bar on mobile
 - [X] blog ui fix (with, margin-bottom, code section, inline code)
 - [X] blog and portfolio list view
+- [X] subscribers once for each mail address
 
 - [ ] wirte good cv
 - [ ] intro video 
@@ -14,7 +15,6 @@
 - [ ] testimonals ui fix (remove first loream)
 - [ ] add all medium article to my site blog section
 - [ ] each client can send two time massage in content me section
-- [ ] subscribers once for each mail address
 - [ ] static file DEBUG=False dose not work
 
 ### version 4
