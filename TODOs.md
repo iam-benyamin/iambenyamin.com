@@ -8,11 +8,11 @@
 - [X] my story
     - [X] remove dot's in smail devices
     - [X] custom my story header section
+- [X] testimonals ui fix (remove first loream)
 
 - [ ] wirte good cv
 - [ ] intro video 
 - [ ] intro header 
-- [ ] testimonals ui fix (remove first loream)
 - [ ] add all medium article to my site blog section
 - [ ] each client can send two time massage in content me section
 
