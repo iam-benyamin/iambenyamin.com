@@ -9,11 +9,11 @@
     - [X] remove dot's in smail devices
     - [X] custom my story header section
 - [X] testimonals ui fix (remove first loream)
+- [X] add all medium article to my site blog section
 
+- [ ] intro header 
 - [ ] wirte good cv
 - [ ] intro video 
-- [ ] intro header 
-- [ ] add all medium article to my site blog section
 - [ ] each client can send two time massage in content me section
 
 - [ ] static file DEBUG=False dose not work
