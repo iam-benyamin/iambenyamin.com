@@ -10,8 +10,8 @@
     - [X] custom my story header section
 - [X] testimonals ui fix (remove first loream)
 - [X] add all medium article to my site blog section
+- [X] intro header 
 
-- [ ] intro header 
 - [ ] wirte good cv
 - [ ] intro video 
 - [ ] each client can send two time massage in content me section
