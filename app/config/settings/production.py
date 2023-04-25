@@ -34,5 +34,5 @@ TIME_ZONE = 'Asia/Tehran'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-STATIC_ROOT = '/home/iambeny1/public_html/iambenyamin.com/static/'
-MEDIA_ROOT = '/home/iambeny1/public_html/iambenyamin.com/media/'
+STATIC_ROOT = '/home/iambeny1/public_html/static/'
+MEDIA_ROOT = '/home/iambeny1/public_html/media/'

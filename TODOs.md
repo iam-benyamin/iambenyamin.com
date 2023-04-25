@@ -11,22 +11,20 @@
 - [X] testimonals ui fix (remove first loream)
 - [X] add all medium article to my site blog section
 - [X] intro header 
+- [X] static file DEBUG=False dose not work
+- [X] http redirect to https
 
 - [ ] wirte good cv
 - [ ] intro video 
 - [ ] each client can send two time massage in content me section
 
-- [ ] static file DEBUG=False dose not work
 
 ### version 4
 
 - [ ] send notifications (e.g. errors, contact me, etc...) in
     - [ ] Mail
     - [ ] Telegram
-- [ ] products
 - [ ] write test project
-- [ ] Dont repeat variables.scss
-- [ ] http redirect to https
 - [ ] find better and simple way to use scss in django
 
 
