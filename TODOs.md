@@ -29,5 +29,6 @@
 - [ ] contact me form 
     - [ ] don't allow to spam
 - [ ] find better and simple way to use scss in django
+- [ ] use tailwind or bootstrap
 - [ ] DRY, use bootstrap and tailwind
 - [ ] blog, portfolio, links, single pages new style 
