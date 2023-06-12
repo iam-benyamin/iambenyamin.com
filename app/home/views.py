@@ -1,7 +1,6 @@
-import requests
+import requests, os
 
 from blog.models import Article as ArticleModel
-from config.settings.local import melipayamak_token
 from django.contrib import messages
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
@@ -55,7 +54,10 @@ def connect_me_form_view(request):
                 'to': '09109667550',
                 'text': f'A person named "{name}" is working with you about the "{subject}"\n\n https://b2n.ir/g57087',
             }
-            response = requests.post(melipayamak_token, json=data)
+            response = requests.post(
+                f"https://console.melipayamak.com/api/send/simple/{os.getenv('melipayamak_token')}",
+                json=data
+            )
             messages.success(
                 request,
                 "Hi! I received your message!"

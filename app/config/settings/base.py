@@ -10,11 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 
-from config.settings.local import email_password
+from dotenv import load_dotenv
 
+
+# load enviroment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -142,4 +145,4 @@ EMAIL_HOST = 'mail.iambenyamin.com'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'admin@iambenyamin.com'
-EMAIL_HOST_PASSWORD = email_password
+EMAIL_HOST_PASSWORD = os.getenv("melipayamak_token")

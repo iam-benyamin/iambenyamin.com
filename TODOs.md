@@ -1,7 +1,7 @@
 ### version 4
 
 - [ ] add link to your github
-- [ ] save variables in os.environt
+- [X] save variables in os.environt
 - [ ] wirte good cv
 - [ ] intro video 
 - [ ] send notifications (e.g. errors, contact me, etc...) in
