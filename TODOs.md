@@ -2,7 +2,7 @@
 
 - [ ] add link to your github
 - [X] save variables in os.environt
-- [ ] wirte good cv
+- [ ] Remove Cv
 - [ ] intro video 
 - [ ] send notifications (e.g. errors, contact me, etc...) in
     - [ ] Mail
@@ -14,3 +14,10 @@
 - [ ] use tailwind or bootstrap
 - [ ] DRY, use bootstrap and tailwind
 - [ ] blog, portfolio, links, single pages new style 
+- [ ] home page update cards of blog post and my resent job
+
+
+### version 5
+- [ ] team member section
+- [ ] compony logo which I worked or working with them
+- [ ] use threads to send emails 
