@@ -145,4 +145,4 @@ EMAIL_HOST = 'mail.iambenyamin.com'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'admin@iambenyamin.com'
-EMAIL_HOST_PASSWORD = os.getenv("melipayamak_token")
+EMAIL_HOST_PASSWORD = os.getenv("email_password")
