@@ -32,3 +32,6 @@ passenger_wsgi.py
 tmp/
 
 # environ
+
+# IDE
+.idea
