@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="freelancer fullstack developer with python and javascript" />
+    <meta name="keywords" content="python, javascript, developer, djagno, react, freelancer, remote, backend, fullstack" />
+    <meta name="auther" content="Benyamin Mahmoudyan" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iam Benyamin</title>
+    <link rel="icon" type="image/png" href="{% static 'image/faveico.png' %}" />
+
+    <!-- loading -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/loading.css' %}" >
+    <script src="{% static 'js/loading.js' %}"></script>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" >
+    {% block style %}{% endblock style %}
+
+    <!-- load icones -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/de27b8e414.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="to-top" onclick="goToTop()">
+        <img src="{% static 'image/arrow.svg' %}" />
+    </div>
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
+    <div id="header" class="section">
+        <div class="container">
+            <div class="flexbox">
+                <div class="logo">
+                    <a href="https://www.iambenyamin.com/">
+                        <img src="{% static 'image/logo.png' %}" />
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a {% if request.get_full_path != '/' %} href="{% url 'main:home' %}" {% endif %} onclick="goToTop()" >Home</a></li>
+                        {% if request.get_full_path == '/' %}
+                        <li><a onclick="scrollToElement('services')">Services</a></li>
+                        <li><a onclick="scrollToElement('portfolio')">Portfolio</a></li>
+                        <li><a onclick="scrollToElement('testimonials')">Testimonials</a></li>
+                        <li><a onclick="scrollToElement('contact')">Contact</a></li>
+                        {% else %}
+                        <li><a href="{% url 'portfolio:list-view' %}" {% if  '/portfolio/' in request.get_full_path  %} class="active" {% endif %} >Portfolio</a></li>
+                        <li><a href="{% url 'blog:list-view' %}"  {% if '/blog/' in request.get_full_path  %} class="active" {% endif %} >Blog</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="navbar-btn" onclick="toggleSlider()">
+                    <i class="lni lni-menu"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="slide" class='toggling'>
+        <div class="close-button" onclick="toggleSlider()">
+            <i class="lni lni-close"></i>
+        </div>
+        <div class="logo">
+            <a href="https://www.iambenyamin.com/.com">
+                <img src="{% static 'image/blue-logo.png' %}" />
+            </a>
+        </div>
+        <div class="description">
+            <p>
+                Design and development of professional, beautiful and optimized web applications for search engines (SEO)
+                with a dedicated code using the latest technologies of the year
+            </p>
+        </div>
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a {% if request.get_full_path != '/' %}href="{% url 'main:home' %}"{% endif %} onclick="goToTop()">Home</a></li>
+                {% if request.get_full_path == '/' %}
+                <li><a onclick="scrollToElement('about-area')">My Story</a></li>
+                <li><a onclick="scrollToElement('services')">Services</a></li>
+                <li><a onclick="scrollToElement('portfolio')">Portfolio</a></li>
+                <li><a onclick="scrollToElement('testimonials')">Testimonials</a></li>
+                <li><a onclick="scrollToElement('blog')">Blog</a></li>
+                <li><a onclick="scrollToElement('contact')">Contact</a></li>
+                {% else %}
+                <li><a href="{% url 'portfolio:list-view' %}" >Portfolio</a></li>
+                <li><a href="{% url 'blog:list-view' %}" >Blog</a></li>
+                <li><a href="{% url 'portfolio:cv-view' 'Benyamin-Mahmoudyan' %}">my CV</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="social-links">
+            <h3>follow me on</h3>
+            <a href="https://www.instagram.com/i4m_benyamin/" target="_blank" ><i class="lni lni-instagram-original"></i></a>
+            <a href="https://www.linkedin.com/in/iambenyamin/" target="_blank" ><i class="lni lni-linkedin-original"></i></a>
+            <a href="https://www.twitter.com/iam_benyamin/" target="_blank" ><i class="lni lni-twitter-original"></i></a>
+            <a href="https://www.t.me/i4m_benyamin/" target="_blank" ><i class="lni lni-telegram-original"></i></a>
+        </div>
+    </div>
+    <div id="overlay" onclick="toggleSlider()"></div>
+
+    {% block main %}{% endblock main %}
+
+    <div id="footer">
+        <div class="container">
+            <div class="flexbox">
+                <div class="copy-write">
+                    <div class="logo">
+                        <a href="{% url 'main:home' %}">
+                            <img src="{% static 'image/blue-logo.png' %}" alt="#" class="img-fluid">
+                        </a>
+                    </div>
+                    <p class="copyright-text">
+                        © 2022 Designed and Developed by <span>Benyamin Mahmoudyan</span></a>
+                    </p>
+                </div>
+                <div class="services">
+                    <h5>services</h5>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="social-medias">
+                    <h5>social medias</h5>
+                    <ul>
+                        <li><a href="https://www.instagram.com/i4m_benyamin/" target="_blank" >Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/iambenyamin/" target="_blank" >Linkedin</a></li>
+                        <li><a href="https://www.twitter.com/iam_benyamin/" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.t.me/i4m_benyamin/" target="_blank" >Telegram</a></li>
+                    </ul>
+                </div>
+                <div class="subscribe">
+                    <h5>subscribe</h5>
+                    <p>Subscribe to my blog for the latest updates</p>
+                    <form action="{% url 'user:subscribe-email' %}" method="POST" class="subscribe-form">
+                        {% csrf_token %}
+                        <input type="email" name="email" id='email' placeholder="Your email address" required="required" >
+                        <div class="button">
+                            <button class="subscribe-btn">
+                                <i class="lni lni-envelope"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="messages" class="{% if not messages %}hide{% endif %}" >
+        <div class="container">
+            <div class="massages__content">
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %}
+                <button onclick="toggleMassge()">Okay</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/scrollTo.js' %}"></script>
+    <script src="{% static 'js/showToTop.js' %}"></script>
+    <script src="{% static 'js/toogleMessage.js' %}"></script>
+    <script src="{% static 'js/showServiesTitle.js' %}"></script>
+    {% block scripts %}{% endblock scripts %}
+</body>
+
+</html>

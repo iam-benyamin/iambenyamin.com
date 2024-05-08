@@ -1,0 +1,18 @@
+#to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: $primary_color;
+    padding: 11px 11px 8px 11px;
+    border-radius: 5px;
+    z-index: 2;
+    display: none;
+    transition: all 500ms;
+    &:hover {
+        background: $dark_color;
+        bottom: 35px;
+    }
+    &.show{
+        display: block;
+    }
+}

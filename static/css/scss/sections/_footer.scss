@@ -1,0 +1,138 @@
+@import "../mixin";
+
+#footer {
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 16px;
+    background: $white_color_2;
+    .flexbox {
+        display: flex;
+        gap: 1.5rem;
+        @include large_responsive {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        div {
+            padding: 0 0.75rem 0 0.75rem;
+            @include medium_responsive {
+                text-align: center;
+            }
+            h5, .logo {
+                font-weight: 700;
+                font-size: 1.25em;
+                margin-bottom: 35px;
+                color: $dark_color_3;
+            }
+            color: $dark_color_2;
+            line-height: 1.5;
+        }
+        li:hover {
+            color: $primary_color;
+        }
+        .copy-write {
+            width: 380px;
+            @include large_responsive {
+                width: 45%;
+            }
+            @include medium_responsive {
+                width: 100%;
+            }
+            .logo {
+                max-width: 250px;
+                a {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .copyright-text {
+                span {
+                    color: $primary_dark_color;
+                }
+            }
+        }
+        .services {
+            @include large_responsive {
+                width: 45%;
+            }
+            @include medium_responsive {
+                width: 100%;
+            }
+            width: 190px;
+            line-height: 2;
+            li {
+                display: list-item;
+            }
+        }
+        .social-medias {
+            @include large_responsive {
+                width: 45%;
+            }
+            @include medium_responsive {
+                width: 100%;
+            }
+            width: 190px;
+            line-height: 2;
+            ul {
+                li {
+                    display: block;
+                    a {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+        .subscribe {
+            @include large_responsive {
+                width: 45%;
+            }
+            @include medium_responsive {
+                width: 100%;
+            }
+            width: 380px;
+            .subscribe-form {
+                position: relative;
+                margin-top: 30px;
+                input {
+                    height: 55px;
+                    width: 100%;
+                    border-radius: 8px;
+                    border: 1px solid $dark_color_4;
+                    box-shadow: none;
+                    text-shadow: none;
+                    padding-left: 18px;
+                    padding-right: 65px;
+                    transition: all .4s ease;
+                    &:focus, &:focus-visible {
+                        outline: none;
+                        border-color: $primary_color;
+                    }
+                }
+                .button {
+                    position: absolute;
+                    right: -7px;
+                    top: 49%;
+                    transform: translateY(-49%);
+                    button {
+                        height: 44px;
+                        width: 44px;
+                        border-radius: 6px;
+                        background-color: $primary_color;
+                        color: $white_color;
+                        text-align: center;
+                        line-height: 44px;
+                        border: none;
+                        font-size: 19px;
+                        transition: all .4s ease;
+                        &:hover {
+                            background-color: $dark_color;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

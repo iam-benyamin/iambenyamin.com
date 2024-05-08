@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/portfolio.css' %}">
+{% endblock style %}
+
+{% block main %}
+<div id="portfolio-list">
+    <div class="container">
+        {% for item in object_list %}
+        <div class="item">
+            <div class="item__image">
+                <img src="{{ item.iamge.url }}" />
+            </div>
+            <div class="item__text-content">
+                <div class="item__title">
+                    <h4><a href="{% url 'portfolio:detail-view' item.slug %}">{{ item.title }}</a></h4>
+                </div>
+                <div class="item__discription">
+                    <p>{{ item.short_description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="pagination">
+            {% if is_paginated %}
+            <ul class="pagination__list">
+                {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}"><i class="lni lni-chevron-left"></i></a></li>
+                {% else %}
+                    <li class="disabled"><span><i class="lni lni-chevron-left"></i></span></li>
+                {% endif %}
+
+                {% for i in paginator.page_range %}
+                    {% if page_obj.number == i %}
+                        <li><span>{{ i }} </span></li>
+                    {% else %}
+                        <li><a href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}"><i class="lni lni-chevron-right"></i></a></li>
+                {% else %}
+                    <li class="disabled"><span><i class="lni lni-chevron-right"></i></span></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock main %}

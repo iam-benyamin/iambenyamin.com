@@ -1,0 +1,35 @@
+#cv-detail {
+    margin-top: 100px;
+    min-height: 20vh;
+    margin-bottom: 100px;
+    .flexbox {
+        display: flex;
+        justify-content: center;
+        .cv {
+            max-width: 668px;
+            margin: 10px;
+            img {
+                border-radius: 8px;
+                width: 100%;
+                max-width: 668px;
+                height: auto;
+                margin: 15px auto;
+            }
+            a {
+                color: $primary_color;
+                display: inline-block;
+            }
+            .cv__body {
+                color: $dark_color_2;
+                line-height: 1.6;
+                font-size: 17px;
+                pre {
+                    border-radius: 8px;
+                    margin: 10px 0;
+                    padding: 15px;
+                    background-color: $white_color_4;
+                }
+            }
+        }
+    }
+}

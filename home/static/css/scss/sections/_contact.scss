@@ -1,0 +1,169 @@
+@import '../mixin';
+
+#contact {
+    padding: 100px 0;
+    .flexbox {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        @include very_large_responsive {
+            flex-wrap: wrap;
+        }
+        .info {
+            width: 40%;
+            @include very_large_responsive {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+            .contact-item {
+                display: flex;
+                border: 1px solid $dark_color_4;
+                border-radius: 10px;
+                background: $white_color;
+                margin-bottom: 30px;
+                padding: 20px 30px;
+                width: 100%;
+                transition: all .3s ease-out 0s;
+                @include very_large_responsive {
+                    width: 49%;
+                    &:nth-child(odd) {
+                        margin-right: 2%;
+                    }
+                }
+                @include large_responsive {
+                    flex-direction: column;
+                }
+                @include medium_responsive {
+                    width: 100%;
+                }
+                .contact-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 22px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: $primary_color;
+                    color: $white_color;
+                    transition: all .3s ease-out 0s;
+                }
+                .contact-content {
+                    @include large_responsive {
+                        padding-left: 0;
+                        padding-top: 15px;
+                    }
+                    padding-left: 20px;
+                    line-height: 1.5;
+                    color: $dark_color_2;
+                    font-size: 1em;
+                    font-weight: 400;
+                    h4 {
+                        color: $primary_color;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                    }
+                }
+                &:hover {
+                    box-shadow: $box-shadow-1;
+                }
+            }
+        }
+        .form {
+            max-width: 60%;
+            @include very_large_responsive {
+                min-width: 100%;
+            }
+            .contact-form-header {
+                padding: 50px 40px;
+                @include small_responsive {
+                    padding: 20px 5px;
+                }
+                background: $white_color;
+                border: 1px solid $dark_color_4;
+                margin-left: 0;
+                border-radius: 10px;
+                transition: all .3s ease-out 0s;
+                &:hover {
+                    box-shadow: $box-shadow-1;
+                }
+                .header {
+                    text-align: center;
+                    margin: 0 0.75rem 30px;
+                    span {
+                        font-weight: 700;
+                        font-size: 20px;
+                        color: $primary_color;
+                    }
+                    h2 {
+                        color: $dark_color_3;
+                        font-size: 36px;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 16px;
+                        color: $dark_color_2;
+                        margin: 0 0.75rem;
+                    }
+                }
+
+                form {
+                    display: block;
+                    .main-form {
+                        display: flex;
+                        flex-wrap: wrap;
+                        input, textarea {
+                            padding: 15px 25px;
+                            border-radius: 30px;
+                            border: 1px solid $dark_color_4;
+                            margin-bottom: 25px;
+                            transition: all .3s ease-out 0s;
+                            font-size: 16px;
+                            &:focus, &:focus-visible {
+                                outline: none;
+                                border-color: $primary_color;
+                            }
+                        }
+                        input {
+                            margin-right: 2%;
+                            width: 48%;
+                            @include medium_responsive {
+                                width: 100%;
+                                margin-right: 0;
+                            }
+                        }
+                        textarea {
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                    .button {
+                        text-align: center;
+                        button {
+                            all: unset;
+                            background-color: $primary_color;
+                            color: $white_color;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 20px;
+                            text-align: center;
+                            letter-spacing: .08em;
+                            text-transform: uppercase;
+                            padding: 12px 24px;
+                            border-radius: 25px;
+                            border: 1px solid transparent;
+                            &:hover {
+                                cursor: pointer;
+                                box-shadow: $box-shadow-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

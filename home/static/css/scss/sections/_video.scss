@@ -1,0 +1,41 @@
+@import "../mixin";
+
+#video-area {
+    background: $white_color_2;
+    padding: 80px 0;
+    .flexbox {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .video {
+            position: relative;
+            height: auto !important;
+            text-align: center;
+            #video-style {
+                border-radius: 8px;
+                width: calc((100% / 12) * 10) !important;
+                @include medium_responsive {
+                    width: 96% !important;
+                }
+            }
+            .play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $white_color ;
+                display: inline-block;
+                border-radius: 50%;
+                padding: 23px 23px 23px 29px;
+                background: $primary_color;
+                font-size: 30px;
+                &:hover {
+                    background: $white_color;
+                    color: $primary_color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

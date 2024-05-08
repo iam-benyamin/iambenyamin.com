@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iam Benyamin</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/links.css' %}" />
+</head>
+
+<body>
+    <div id="links">
+        {% for item in object_list %}
+        <div class="content">
+            <a href="{{ item.links }}" target="_blank"
+                style="color: #{{ item.color }}; border-color: #{{ item.color }}"> {{ item.title }}</a>
+            <p class="discription">{{ item.discription }}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+    <script>
+        var elements = document.querySelectorAll('.discription');
+        console.log(elements);
+        [...elements].forEach((e) => {
+            if (e.innerHTML == 'None') {
+                e.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+
+</html>

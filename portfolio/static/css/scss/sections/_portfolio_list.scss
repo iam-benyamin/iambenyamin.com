@@ -1,0 +1,85 @@
+@import '../mixin';
+
+#portfolio-list {
+    margin-top: 100px;
+    min-height: 20vh;
+    .item {
+        margin-bottom: 15px;
+        display: flex;
+        @include small_responsive {
+            flex-direction: column;
+            align-items: center;
+        }
+        .item__image {
+            margin: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 25%;
+            min-width: 25%;
+            max-height: 250px;
+            @include small_responsive {
+                max-width: 100%;
+                min-width: 50%;
+                max-height: 500px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                display: inline-block;
+                transition: all 300ms;
+            }
+        }
+        .item__text-content {
+            width: 100%;
+            .item__title {
+                h4 {
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    a {
+                        margin: 10px;
+                        color: $dark_color_3;
+                        &:hover {
+                            color: $primary_color;
+                        }
+                    }
+                }
+            }
+            .item__discription {
+                margin: 10px;
+                p {
+                    color: $dark_color_2;
+                }
+            }
+        }
+        &:hover {
+            .item__image {
+                img {
+                    transform: scale(1.1) rotate(1deg);
+                }
+            }
+        }
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom:  50px;
+        ul {
+            li {
+                margin: 1px;
+                a, span {
+                    border-radius: 3px;
+                    padding: 8px 13px;
+                    color: $dark_color_2;
+                    transition: all 0.3s ease;
+                    font-size: 17px;
+                    &:hover {
+                        background-color: $primary_color;
+                        color: $white_color;
+                    }
+                }
+            }
+        }
+    }
+}

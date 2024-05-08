@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/portfolio.css' %}">
+{% endblock style %}
+
+{% block main %}
+<div id="portfolio-detail">
+    <div class="container">
+        <div class="flexbox">
+            <div class="portfolio">
+                <div class="portfolio__title">
+                    <h4>{{ object.title }}</h4>
+                </div>
+                <div class="portfolio__discription" >
+                    {{ object.short_description }}
+                </div>
+                <img src="{{ object.iamge.url }}" /><br />
+                <div class="portfolio__body" >
+                    {{ object.description | safe}}
+                </div>
+                {% if object.customer_opinion %}
+                <div class="portfolio__customer-opinion">
+                    <h3>customer opinion</h3>
+                    {{ object.customer_opinion }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

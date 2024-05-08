@@ -1,0 +1,427 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<style>
+    .pagination span {
+        width: 15px;
+        border-radius: 8px;
+        height: 6px;
+        background-color: #155bd5;
+    }
+
+    .pagination .span {
+        background-color: #1c3ab6;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #666666;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+</style>
+
+{% endblock %}
+
+{% block main %}
+<div id="hero" class="section">
+    <div class="container">
+        <div class="flexbox">
+            <div class="text">
+                <h1>{{ hero.header }}</h1>
+                <p>{{ hero.text }}</p>
+                <div class="buttons">
+                    <a class="btn" type="bottun" onclick="scrollToElement('contact')">get started</a> 
+                    <a class="btn" type="bottun" href="https://github.com/iam-benyamin/" target="_blankho">My GitHub</a>
+                    {% comment %}<a class="btn" type="bottun" href="{% url 'portfolio:cv-view' 'Benyamin-Mahmoudyan' %}">My CV</a>{% endcomment %}
+                    <a class="play" onclick="scrollToElement('video-area');playVideo();">
+                        <span><i class="lni lni-play"></i></span>
+                        <span>watch intro</span>
+                    </a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="{{ hero.thumbnail.url }}" alt="hero image" />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="about-area">
+    <div class="container">
+        <div class="flexbox">
+            <div class="image">
+                <svg class="shape" width="106" height="134" viewBox="0 0 106 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1.66654" cy="1.66679" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="1.66654" cy="16.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="1.66654" cy="31.0001" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="1.66654" cy="45.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="1.66654" cy="60.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="1.66654" cy="88.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="1.66654" cy="117.667" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="1.66654" cy="74.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="1.66654" cy="103" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="1.66654" cy="132" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.3333" cy="1.66679" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.3333" cy="16.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.3333" cy="31.0001" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.3333" cy="45.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.333" cy="60.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.333" cy="88.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.333" cy="117.667" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.333" cy="74.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.333" cy="103" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="16.333" cy="132" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="30.9998" cy="1.66679" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6665" cy="1.66679" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="30.9998" cy="16.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6665" cy="16.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="30.9998" cy="31.0001" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6665" cy="31.0001" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="30.9998" cy="45.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6665" cy="45.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="31" cy="60.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6668" cy="60.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="31" cy="88.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6668" cy="88.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="31" cy="117.667" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6668" cy="117.667" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="31" cy="74.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6668" cy="74.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="31" cy="103" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6668" cy="103" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="31" cy="132" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="74.6668" cy="132" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="1.66679" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="1.66679" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="16.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="16.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="31.0001" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="31.0001" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="45.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="45.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="60.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="60.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="88.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="88.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="117.667" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="117.667" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="74.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="74.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="103" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="103" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="45.6665" cy="132" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="89.3333" cy="132" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.3333" cy="1.66679" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="1.66679" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.3333" cy="16.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="16.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.3333" cy="31.0001" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="31.0001" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.3333" cy="45.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="45.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.333" cy="60.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="60.3335" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.333" cy="88.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="88.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.333" cy="117.667" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="117.667" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.333" cy="74.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="74.6668" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.333" cy="103" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="103" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="60.333" cy="132" r="1.66667" fill="#DADADA"></circle>
+                    <circle cx="104" cy="132" r="1.66667" fill="#DADADA"></circle>
+                </svg>
+                <img src="{% static 'image/about.jpg' %}" alt="about us" />
+            </div>
+            <div class="text-area">
+                <h6>MY STORY</h6>
+                <h2>Just tell me what you want,<br />I will do the rest</h2>
+                <div class="about-tabs">
+                    <div class="nav">
+                        <div class="nav-tabs">
+                            <a type="button" class="nav-btn active" onclick="showTab(event, 'nav-who')">who I am</a>
+                            <a type="button" class="nav-btn" onclick="showTab(event, 'nav-vision')">my vision</a>
+                            <a type="button" class="nav-btn" onclick="showTab(event, 'nav-history')">my history</a>
+                        </div>
+                    </div>
+                    <div class="paragraph about-tabs__content" id="nav-who">
+                        <p>{{ my_story.who_i_am | safe }}</p>
+                    </div>
+                    <div class="paragraph about-tabs__content" id="nav-vision">
+                        <p>{{ my_story.my_vision | safe }}</p>
+                    </div>
+                    <div class="paragraph about-tabs__content" id="nav-history">
+                        <p>{{ my_story.my_history | safe }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="services" class="section">
+    <div class="container">
+        <div class="flexbox">
+            <div class="title">
+                <h6>Services</h6>
+                <h2>Our Best Services</h2>
+                <p>
+                    Integrating various APIs, databases, and third-party tools to improve the functionality and usability of websites.
+                </p>
+            </div>
+            <div class="services-card">
+                {% for item in services %}
+                <div class="card">
+                    <div class="icone">
+                        <i class="{{ item.icone }}"></i>
+                    </div>
+                    <div class="content">
+                        <h4>{{ item.title }}</h4>
+                        <p>{{ item.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div id="video-area">
+    <div class="container">
+        <div class="flexbox">
+            <div class="title">
+                <h6>Our Intro Video</h6>
+                <h2>Watch Our Promo Video</h2>
+                <p>
+                    Introducing Myself: A Passionate and Skilled Web Developer Dedicated to Crafting Engaging User Experiences and Solving Complex Problems with Innovative Solutions
+                </p>
+            </div>
+            <div class="video">
+                <video id="video-style" poster="{{ video.thumbnail.url  }}">
+                    <source src="{{ video.video.url }}" type="video/mp4">
+                </video>
+                <div class="play-btn" onclick="playVideo()">
+                    <i class="lni lni-play"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="portfolio" class="section">
+    <div class="container">
+        <div class="flexbox">
+            <div class="title">
+                <h6>Our Portfolio</h6>
+                <h2>Our Recent Works</h2>
+                <p>Built and maintained scalable web architectures for high traffic sites using cloud technologies</p>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <button class="active" onclick="togglePortfolioItem(event)" data-filter="all-work">all work</button>
+                    {% for item in branches %}
+                        <button onclick="togglePortfolioItem(event)" data-filter="{{ item.data_filter }}">{{ item.name }}</button>
+                    {% endfor %}
+                </div>
+                <div class="card-area">
+                    {% for item in portfolioes %}
+                        <div class="card" data-filter="{{ item.branch.data_filter }}">
+                            <div class="card__image">
+                                <img src="{{item.iamge.url }}" alt="card" />
+                            </div>
+                            <div class="withe-board">
+                                <div class="portfolio-icone">
+                                    <div class="zoom">
+                                        <i class="lni lni-zoom-in"></i>
+                                    </div>
+                                    <div class="copy-link">
+                                        <i class="lni lni-link"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4><a href="{% url 'portfolio:detail-view' item.slug %}">{{ item.title }}</a></h4>
+                            </div>
+                            <div>
+                                <p>{{ item.short_description }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="button">
+                <a href="{% url 'portfolio:list-view' %}" class="btn">
+                    view all
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="testimonials" class="section">
+    <div class="container">
+        <div class="title">
+            <h6>Customer Reviews</h6>
+            <h2>Our Testimonials</h2>
+            <p>A testimonial is a statement from my past customer that describes how my product or service helped them.</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="progress-bar"></div>
+            <div class="fa fa-quote-right fa-quote"></div>
+            <div class="fa fa-quote-left fa-quote"></div>
+            <p class="testimonial">I have had many happy customers over the years. We love hearing feedback and are always striving to improve our business and customer relations.</p>
+            <div class="person-items">
+                <img class="logo" src="{% static 'image/client.jpeg' %}" alt="logo" />
+                <div class="user-details">
+                    <h4 class="username">Benyamin Mahmoudyan</h4>
+                    <p class="role">software developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="call-to-action">
+    <div class="container-fluid">
+        <div class="call-to-action__title">
+            <h2>If you are looking for someone to build an app for you<br />we can talk together</h2>
+        </div>
+        <div class="call-to-action__subtitle">
+            <p>
+                I can help you in the process of making software. So, if you want to make your own application and make money from it in a short time without any trouble.
+                <br />press the below button and call me
+            </p>
+        </div>
+        <div class="call-to-action__button">
+            <a onclick="scrollToElement('contact')" type="button">get started</a>
+        </div>
+    </div>
+</div>
+<div id="blog">
+    <div class="container">
+        <div class="flexbox">
+            <div class="title">
+                <h6>latest article</h6>
+                <h2>Latest Blog</h2>
+                <p>
+                    Tips and Tricks for Writing Clean and Maintainable Code 
+                </p>
+            </div>
+            <div class="post">
+                {% for item in articles %}
+                <div class="post-item">
+                    <div class="post-item__image">
+                        <img src="{{ item.thumbnail.url }}" alt="blog 1" />
+                    </div>
+                    <div class="post-item__title">
+                        <h4>
+                            <a href="{% url 'blog:detail-view' item.slug %}">{{ item.title }}</a>
+                        </h4>
+                    </div>
+                    <div class="post-item__description">
+                        <p>{{ item.discription | slice:":120" }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="button">
+                <a href="{% url 'blog:list-view' %}" class="btn">
+                    view all blog post
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact" class="section">
+    <div class="container">
+        <div class="flexbox">
+            <div class="info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="lni lni-phone"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h4>Contact</h4>
+                        <p>{{ contact.number }}</p>
+                        <p>{{ contact.email }}</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="lni lni-map-marker"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h4>Address</h4>
+                        <p>{{ address.address }}</p>
+                        <p>{{ address.country }}</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="lni lni-alarm-clock"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h4>Schedule</h4>
+                        <p>{{ schedule.days }}</p>
+                        <p>{{ schedule.time }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="contact-form-header">
+                    <div class="header">
+                        <div class="section-title text-center">
+                            <span> Get in Touch </span>
+                            <h2>
+                                Ready to Get Started
+                            </h2>
+                            <p>
+                                You can tell me what you want through this form.
+                                Or you can use the other ways that I mentioned next to this form
+                            </p>
+                        </div>
+                    </div>
+                    <form action="{% url 'main:connect-me-view' %}" class="contact-form" method="post">
+                        {% csrf_token %}
+                        <div class="main-form">
+                            <input type="text" name="name" id="name" placeholder="Name" required="">
+                            <input type="email" name="email" id="email" placeholder="Email" required="">
+                            <input type="text" name="phone" id="phone" placeholder="Phone" required="">
+                            <input type="text" name="subject" id="email" placeholder="Subject" required="">
+                            <textarea name="message" id="message" placeholder="Type Message" rows="5"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="btn primary-btn rounded-full">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}
+
+{% block scripts %}
+<script src="{% static 'js/tabs.js' %}"></script>
+<script src="{% static 'js/playVideo.js' %}"></script>
+<script src="{% static 'js/testimonialSwiper.js' %}"></script>
+<script src="{% static 'js/scrollActiveHeader.js' %}"></script>
+<script src="{% static 'js/portfolioTabs.js' %}"></script>
+{% endblock scripts %}

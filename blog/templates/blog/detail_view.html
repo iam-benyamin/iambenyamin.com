@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+{% endblock style %}
+
+{% block main %}
+<div id="blog-detail">
+    <div class="container">
+        <div class="flexbox">
+            <div class="article">
+                <div class="article__title">
+                    <h4>{{ object.title }}</h4>
+                </div>
+                <div class="article__discription" >
+                    {{ object.discription }}
+                </div>
+                <img src="{{ object.thumbnail.url }}" /><br />
+                <div class="article__body" >
+                    {{ object.body | safe}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

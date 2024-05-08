@@ -1,0 +1,91 @@
+@import '../mixin';
+
+#blog {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+    background: $white_color_2;
+    .post {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: left;
+        .post-item {
+            max-width: 33%;
+            text-align: left;
+            @include large_responsive {
+                min-width: 50%;
+            }
+            @include medium_responsive {
+                min-width: 100%;
+            }
+            .post-item__image {
+                margin: 10px 10px 25px 10px;
+                border-radius: 8px;
+                overflow: hidden;
+                max-height: 250px;
+                @include medium_responsive {
+                    max-height: none;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    transition: all 300ms;
+                }
+            }
+            .post-item__title {
+                h4 {
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    a {
+                        margin: 10px;
+                        color: $dark_color_3;
+                        &:hover {
+                            color: $primary_color;
+                        }
+                    }
+                }
+            }
+            .post-item__description {
+                margin: 10px;
+                p {
+                    color: $dark_color_2;
+                }
+            }
+            &:hover {
+                .post-item__image {
+                    img {
+                        transform: scale(1.1) rotate(1deg);
+                    }
+                }
+            }
+        }
+    }
+    .button {
+        text-align: center;
+        margin: 70px auto 0px;
+        a.btn {
+            all: unset;
+            background-color: $primary_color;
+            color: $white_color;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: 12px 24px;
+            border-radius: 25px;
+            border: 1px solid transparent;
+            &:hover {
+                cursor: pointer;
+                box-shadow: $box-shadow-1;
+                transition: all .3s ease-out 0s;
+            }
+        }
+    }
+}

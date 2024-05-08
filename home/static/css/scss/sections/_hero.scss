@@ -1,0 +1,95 @@
+@import "../mixin";
+
+#hero {
+    padding: 160px 0 100px;
+    background: $primary_color;
+    color: $white_color;
+    .flexbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-items: center;
+        @include large_responsive {
+            flex-direction: column;
+        }
+        .image {
+            min-width: 50%;
+            @include large_responsive {
+                width: 100%;
+                margin-top: 40px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
+        }
+        .text {
+            padding: 10px;  
+            h1 {
+                font-weight: 700;
+                text-shadow: 0 3px 8px #00000017;
+                text-transform: capitalize;
+                font-size: 44px;
+            }          
+            p {
+                margin-top: 30px;
+                margin-right: 20px;
+                opacity: 0.7;
+                line-height: 1.5;
+                font-size: 16px;
+            }
+            .buttons {
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                .btn {
+                    margin-top: 10px;
+                    display: inline-block;
+                    color: $primary_color;
+                    background: $white_color;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 16px;
+                    letter-spacing: 0.08em;
+                    margin-right: 12px;
+                    padding: 12px 24px;
+                    border: 1px solid $white_color;
+                    border-radius: 4px;
+                    &:hover {
+                        color: $white_color;
+                        background: $primary_color;
+                        cursor: pointer;
+                    }
+                }
+                .play {   
+                    margin-top: 10px;
+                    color: $white_color;
+                    display: flex;
+                    width: 170px;
+                    span {
+                        &:nth-child(1) {
+                            cursor: pointer;
+                            padding: 15px 15px 15px 18px;
+                            background-color: $white_color;
+                            border-radius: 25px;
+                            color: $primary_color;
+                            font-size: 18px;
+                        }
+                        &:nth-child(2) {
+                            cursor: pointer;
+                            margin-left: 10px;
+                            text-transform: capitalize;
+                            font-weight: bold;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

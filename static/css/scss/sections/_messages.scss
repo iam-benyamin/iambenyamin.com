@@ -1,0 +1,51 @@
+@import "../mixin";
+
+#messages {
+    position: fixed;
+    bottom: 1px;
+    margin: 1% auto;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 0.6s ease;
+
+    .massages__content {
+        color: $white_color;
+        background-color: $primary_color;
+        width: 100%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+
+        @include medium_responsive {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        padding: 20px;
+        box-shadow: $box-shadow-3;
+
+        button {
+            margin: 8px;
+            all: unset;
+            border: 1px solid $white_color;
+            padding: 5px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            @include medium_responsive {
+                margin-top: 7px;
+            }
+
+            &:hover {
+                background-color: $white_color;
+                color: $primary_color;
+            }
+        }
+    }
+}
+
+#messages.hide {
+    bottom: -100px;
+}

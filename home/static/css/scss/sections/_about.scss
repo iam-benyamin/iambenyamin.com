@@ -1,0 +1,129 @@
+#about-area {
+    background: $white_color_2;
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+        padding: 120px 0 100px 0;
+        @include very_large_responsive {
+            flex-direction: column;
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+        @include medium_responsive {
+            width: 97%;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+        @include small_responsive {
+            width: 100%;
+        }
+        .image {
+            position: relative;
+            z-index: 1;
+            svg {
+                @include small_responsive {
+                    display: none;
+                }
+                position: absolute;
+                top: -30px;
+                z-index: -1;
+            }
+            img {
+                flex-basis: 100%;
+                margin-left: 30px;
+                @include very_large_responsive {
+                    width: 100%;
+                }
+                @include small_responsive {
+                    margin-left: 0;
+                }
+            }
+            @include large_responsive {
+                width: 88%;
+            }
+            @include medium_responsive {
+                width: 94%;
+            }
+            @include small_responsive {
+                width: 100%;
+            }
+        }
+        .text-area {
+            margin: 30px;
+            padding: 20px;
+            @include small_responsive {
+                padding: 0;
+                margin: 30px 0 0 0;
+            }
+            h6 {
+                position: relative;
+                padding-left: 30px;
+                font-size: 1.15em;
+                font-weight: 300;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    background: $primary_color;
+                    left: 0;
+                    top: 50%;
+                    height: 2px;
+                    width: 20px;
+                    margin-top: -1px;
+                }
+            }
+            h2 {
+                font-weight: 700;
+                font-size: 2em;
+                line-height: 1.25;
+                margin-top: 20px;
+            }
+            .about-tabs {
+                .nav {
+                    margin: 40px 0 30px 0;
+                    .nav-tabs {
+                        display: flex;
+                        background: $white_color_3;
+                        padding: 15px;
+                        border-radius: 5px;
+                        @include very_large_responsive {
+                            flex-wrap: wrap;
+                        }
+                        .nav-btn {
+                            cursor: pointer;
+                            text-transform: capitalize;
+                            font-weight: 700;  
+                            color: $dark_color;
+                            background: $white_color;
+                            border-radius: 5px;
+                            margin-right: 15px;
+                            padding: 10px;
+                            &:hover {
+                                color: $primary_color;
+                            }
+                            @include medium_responsive {
+                                width: 100%;
+                                text-align: center;
+                                margin: 8px 5px;
+                            }
+                        }
+                        .active {
+                            color: $white_color;
+                            background: $primary_color;
+                            &:hover {
+                                color: $white_color;
+                            }
+                        }
+                    }
+                }
+            }
+            .paragraph {
+                color: $dark_color_2;
+                p {
+                    margin-bottom: 15px;
+                    line-height: 1.5;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
